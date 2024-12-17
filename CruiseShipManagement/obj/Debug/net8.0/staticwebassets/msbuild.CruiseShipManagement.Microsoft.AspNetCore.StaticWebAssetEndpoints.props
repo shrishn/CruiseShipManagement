@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CruiseShipManagement.oj6bmko3o5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HCT/zdQ6BLuKoYT6HssY5D2zbl1mkBPqfdSxk7Tt8qY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HCT/zdQ6BLuKoYT6HssY5D2zbl1mkBPqfdSxk7Tt8qY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Dec 2024 05:00:49 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HCT/zdQ6BLuKoYT6HssY5D2zbl1mkBPqfdSxk7Tt8qY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Dec 2024 11:18:56 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CruiseShipManagement/CruiseShipManagement.oj6bmko3o5.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CruiseShipManagement.oj6bmko3o5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oj6bmko3o5"},{"Name":"integrity","Value":"sha256-HCT/zdQ6BLuKoYT6HssY5D2zbl1mkBPqfdSxk7Tt8qY="},{"Name":"label","Value":"_content/CruiseShipManagement/CruiseShipManagement.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HCT/zdQ6BLuKoYT6HssY5D2zbl1mkBPqfdSxk7Tt8qY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Dec 2024 05:00:49 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HCT/zdQ6BLuKoYT6HssY5D2zbl1mkBPqfdSxk7Tt8qY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Dec 2024 11:18:56 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CruiseShipManagement/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
