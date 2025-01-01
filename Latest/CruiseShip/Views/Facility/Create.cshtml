@@ -1,0 +1,53 @@
+﻿@model Facility
+
+<form method="post">
+	<div class="border p-3 mt-4 text-dark " style="border-radius:30px">
+		<div class="row pb-2">
+			<h2 class="text-dark">Create Facility</h2>
+			
+		</div>
+		<hr class="m-0 mb-2"/>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			<label asp-for="Name" class="mb-1"></label>
+			<input asp-for="Name"  class="form-control"/>
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Description" class="mb-1"></label>
+			<input asp-for="Description" class="form-control" />
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Fee" class="mb-1"></label>
+			<input  asp-for="Fee" class="form-control" />
+			<span asp-validation-for="Fee" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="AvailableSlots" class="mb-1"></label>
+			<input asp-for="AvailableSlots" class="form-control" />
+			<span asp-validation-for="AvailableSlots" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CreatedBy" class="mb-1"></label>
+			<input asp-for="CreatedBy" class="form-control" />
+			<span asp-validation-for="CreatedBy" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<button type="submit" class="btn btn-dark form-control">Create</button>
+			</div>
+			<div class="col-6 col-md-3">
+				<a asp-controller="Facility" asp-action="Index" class="btn btn-outline-dark form-control">Back to List</a>
+			</div>
+		</div>
+	</div>
+	
+</form>
+
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+}
