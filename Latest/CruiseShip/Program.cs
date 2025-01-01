@@ -1,4 +1,6 @@
 using CruiseShip.Data;
+using CruiseShip.Data.Repository;
+using CruiseShip.Data.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +16,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
     .AddDefaultTokenProviders();
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IFacilityRepository,FacilityRepository>();   
 
 var app = builder.Build();
 
