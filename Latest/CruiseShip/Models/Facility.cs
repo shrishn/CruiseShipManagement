@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CruiseShip.Models
 {
@@ -24,12 +25,16 @@ namespace CruiseShip.Models
         public int AvailableSlots { get; set; }
 
         [DisplayName("Created By")]
-        [ForeignKey("CreatedBy")]
-        public string? CreatedBy { get; set; }
+        
+        public string CreatedBy { get; set; }
 
         // Navigation property
         //[NotMapped]
-        //public IdentityUser CreatedByUser { get; set; }
+        [ForeignKey("CreatedBy")]
+        [ValidateNever]
+        public IdentityUser CreatedByUser { get; set; }
+        [ValidateNever]
+        public string ImageURL { get; set; }
 
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }

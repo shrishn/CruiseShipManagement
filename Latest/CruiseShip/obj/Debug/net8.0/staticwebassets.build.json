@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/+nhEN9Mt84opAJSm85z1raE/FtYOdw+1fJQjjcEHzM=",
+  "Hash": "9p6MYxBc45qdja02BG2p+9qriOef0Kx/o9bNCqIbgv4=",
   "Source": "CruiseShip",
   "BasePath": "_content/CruiseShip",
   "Mode": "Default",
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sn2hvkavl8",
-      "Integrity": "uNYwV82IGMl7LSoLEoCTFoE8bcAO8HFV9lUOIpGJY94=",
+      "Fingerprint": "51jygo1ksg",
+      "Integrity": "J+v1vF7D9XfQCPWJse98yllWEJgeE98gnIUCjKFhqNA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -2870,7 +2870,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 02 Jan 2025 05:55:18 GMT"
+          "Value": "Thu, 02 Jan 2025 06:49:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2907,7 +2907,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 02 Jan 2025 05:55:18 GMT"
+          "Value": "Thu, 02 Jan 2025 06:49:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5314,6 +5314,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap.51jygo1ksg.css",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326830"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J+v1vF7D9XfQCPWJse98yllWEJgeE98gnIUCjKFhqNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 06:47:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51jygo1ksg"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J+v1vF7D9XfQCPWJse98yllWEJgeE98gnIUCjKFhqNA="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
@@ -5324,7 +5369,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "351884"
+          "Value": "326830"
         },
         {
           "Name": "Content-Type",
@@ -5332,11 +5377,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uNYwV82IGMl7LSoLEoCTFoE8bcAO8HFV9lUOIpGJY94=\""
+          "Value": "\"J+v1vF7D9XfQCPWJse98yllWEJgeE98gnIUCjKFhqNA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Jan 2025 16:27:12 GMT"
+          "Value": "Thu, 02 Jan 2025 06:47:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5346,7 +5391,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uNYwV82IGMl7LSoLEoCTFoE8bcAO8HFV9lUOIpGJY94="
+          "Value": "sha256-J+v1vF7D9XfQCPWJse98yllWEJgeE98gnIUCjKFhqNA="
         }
       ]
     },
@@ -5921,51 +5966,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.sn2hvkavl8.css",
-      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "351884"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uNYwV82IGMl7LSoLEoCTFoE8bcAO8HFV9lUOIpGJY94=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 01 Jan 2025 16:27:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sn2hvkavl8"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-uNYwV82IGMl7LSoLEoCTFoE8bcAO8HFV9lUOIpGJY94="
         }
       ]
     },

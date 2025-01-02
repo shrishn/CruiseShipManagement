@@ -34,7 +34,9 @@
 		</div>
 		<div class="mb-3">
 			<label asp-for="CreatedBy" class="mb-1"></label>
-			<input asp-for="CreatedBy" class="form-control" />
+			<select asp-for="CreatedBy" asp-items="@ViewData["AdminUsers"] as IEnumerable<SelectListItem>" class="form-select">
+				<option disabled selected>--Select Admin--</option>
+			</select>
 			<span asp-validation-for="CreatedBy" class="text-danger"></span>
 		</div>
 		<div class="row">

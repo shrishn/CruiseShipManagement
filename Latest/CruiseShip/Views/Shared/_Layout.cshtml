@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CruiseShip</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CruiseShip.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand p-2" asp-area="" asp-controller="Home" asp-action="Index"><i class="bi bi-rocket-takeoff-fill"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -29,8 +29,8 @@
                                 Manage
                             </a>
                             <ul class="dropdown-menu">
-                                <li> <a class="dropdown-item" asp-area="Admin" asp-controller="Facility" asp-action="Index">Facility</a></li>
-                                <li> <a class="dropdown-item" asp-area="Admin" asp-controller="Room" asp-action="Index">Room</a></li>
+                                <li> <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Facility" asp-action="Index">Facility</a></li>
+                                <li> <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Room" asp-action="Index">Room</a></li>
                              
                             </ul>
                         </li>

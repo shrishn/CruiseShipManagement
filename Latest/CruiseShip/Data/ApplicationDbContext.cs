@@ -42,13 +42,13 @@ namespace CruiseShip.Data
                 .OnDelete(DeleteBehavior.Restrict);
             // Configure relationships for Facility
             modelBuilder.Entity<Facility>()
-               .HasOne<IdentityUser>() // Specify the related entity type
+               .HasOne(r => r.CreatedByUser) // Specify the related entity type
                .WithMany()
                .HasForeignKey(f => f.CreatedBy)
                .OnDelete(DeleteBehavior.Restrict);
             // Configure relationships for Room
             modelBuilder.Entity<Room>()
-                .HasOne<IdentityUser>()
+                .HasOne(r => r.CreatedByUser)
                 .WithMany()
                 .HasForeignKey(r => r.CreatedBy)
                 .OnDelete(DeleteBehavior.Restrict);
@@ -65,7 +65,8 @@ namespace CruiseShip.Data
                     Description = "Fully equipped gym with modern equipment.",
                     Fee = 50.00m,
                     AvailableSlots = 20,
-                    CreatedBy = adminId
+                    CreatedBy = adminId,
+                    ImageURL = ""
                 },
                 new Facility
                 {
@@ -74,7 +75,8 @@ namespace CruiseShip.Data
                     Description = "Olympic-sized pool with lifeguards on duty.",
                     Fee = 100.00m,
                     AvailableSlots = 10,
-                    CreatedBy = adminId
+                    CreatedBy = adminId,
+                    ImageURL = ""
                 },
                 new Facility
                 {
@@ -83,7 +85,8 @@ namespace CruiseShip.Data
                     Description = "Spacious party hall with modern amenities.",
                     Fee = 300.00m,
                     AvailableSlots = 5,
-                    CreatedBy = adminId
+                    CreatedBy = adminId,
+                    ImageURL = ""
                 });
         }
     }

@@ -21,11 +21,11 @@ namespace CruiseShip.Models
 
         [Required]
         public int AvailableSlots { get; set; }
-        [ForeignKey("CreatedBy")]
+        
         public string CreatedBy { get; set; }
 
-        
-        //public IdentityUser CreatedByUser { get; set; }
+        [ForeignKey("CreatedBy")]
+        public IdentityUser? CreatedByUser { get; set; }
 
         // Navigation property
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
