@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CruiseShip Project Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Project File Documentation</h1>
+
+    <p>This document explains the purpose of each important file and directory in the <strong>CruiseShip</strong> project. The project is organized into various areas, controllers, views, and models to ensure maintainability and scalability.</p>
+
+    <h2>Root Directory</h2>
+    <ul>
+        <li><strong>appsettings.json</strong>: This file contains configuration settings for the application, such as database connection strings, application secrets, and other settings that the app can use at runtime.</li>
+        <li><strong>CruiseShip.csproj</strong>: This is the project file for the ASP.NET Core MVC application. It defines the project's structure, references, and dependencies.</li>
+        <li><strong>CruiseShip.sln</strong>: This is the solution file for Visual Studio. It holds information about the project's structure and is used to open the project in Visual Studio.</li>
+        <li><strong>Program.cs</strong>: The entry point for the application. It sets up and configures the ASP.NET Core host and the application's services.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Areas Directory</h2>
+    <p>The <strong>Areas</strong> directory is used to organize the application into different sections, each with its own set of controllers, views, and models. This is helpful for large applications.</p>
+
+    <h3>Admin Area</h3>
+    <p>The <strong>Admin</strong> area contains controllers, views, and models that are specific to the admin functionality of the application.</p>
+    <ul>
+        <li><strong>Controllers/FacilityController.cs</strong>: This controller handles CRUD operations for the <code>Facility</code> model, including creating, editing, and deleting facilities.</li>
+        <li><strong>Controllers/RoomController.cs</strong>: This controller handles CRUD operations for the <code>Room</code> model, including creating, editing, and deleting rooms.</li>
+    </ul>
+    <p><strong>Views/Facility</strong>: This folder contains the views related to <code>Facility</code> operations:</p>
+    <ul>
+        <li><strong>Create.cshtml</strong>: View for creating a new facility.</li>
+        <li><strong>Delete.cshtml</strong>: View for deleting a facility.</li>
+        <li><strong>Edit.cshtml</strong>: View for editing a facility.</li>
+        <li><strong>Index.cshtml</strong>: View for displaying a list of facilities.</li>
+    </ul>
+    <p><strong>Views/Room</strong>: This folder contains the views related to <code>Room</code> operations:</p>
+    <ul>
+        <li><strong>Create.cshtml</strong>: View for creating a new room.</li>
+        <li><strong>Delete.cshtml</strong>: View for deleting a room.</li>
+        <li><strong>Edit.cshtml</strong>: View for editing a room.</li>
+        <li><strong>Index.cshtml</strong>: View for displaying a list of rooms.</li>
+    </ul>
+    <ul>
+        <li><strong>_ViewImports.cshtml</strong>: Contains common imports for the Admin area views (e.g., shared namespaces and directives).</li>
+        <li><strong>_ViewStart.cshtml</strong>: Defines the layout for views in the Admin area, including any shared view settings.</li>
+    </ul>
+
+    <h3>Identity Area</h3>
+    <p>The <strong>Identity</strong> area handles authentication and user management features such as login, registration, and password management.</p>
+    <ul>
+        <li><strong>Pages/Account</strong>: This folder contains pages related to user account management.</li>
+    </ul>
+    <ul>
+        <li><strong>ConfirmEmail.cshtml</strong>: Page for confirming the user's email address.</li>
+        <li><strong>Login.cshtml</strong>: Login page for users.</li>
+        <li><strong>Register.cshtml</strong>: Registration page for new users.</li>
+    </ul>
+    <p><strong>Manage</strong>: This folder contains pages for managing user profiles, passwords, and emails.</p>
+    <ul>
+        <li><strong>ChangePassword.cshtml</strong>: Page for changing the user's password.</li>
+        <li><strong>Email.cshtml</strong>: Page for managing the user's email.</li>
+        <li><strong>PersonalData.cshtml</strong>: Page for viewing and editing personal data.</li>
+        <li><strong>SetPassword.cshtml</strong>: Page for setting a new password after registration.</li>
+    </ul>
+    <ul>
+        <li><strong>_ViewImports.cshtml</strong>: Contains common imports for the Identity views.</li>
+        <li><strong>_ViewStart.cshtml</strong>: Defines the layout for Identity views.</li>
+    </ul>
+
+    <h3>Voyager Area</h3>
+    <p>The <strong>Voyager</strong> area contains views and controllers for the main functionality accessible to the users (voyagers).</p>
+    <ul>
+        <li><strong>Controllers/HomeController.cs</strong>: This controller manages the home page and other user-facing pages.</li>
+    </ul>
+    <p><strong>Views/Home</strong>: This folder contains views related to the voyager's homepage and other related pages:</p>
+    <ul>
+        <li><strong>Index.cshtml</strong>: The main landing page for voyagers.</li>
+        <li><strong>Privacy.cshtml</strong>: A page that displays privacy information.</li>
+    </ul>
+    <ul>
+        <li><strong>_ViewImports.cshtml</strong>: Contains common imports for the Voyager views.</li>
+        <li><strong>_ViewStart.cshtml</strong>: Defines the layout for the Voyager views.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Data Directory</h2>
+    <p>The <strong>Data</strong> directory contains files related to database operations, including models, migrations, and repositories.</p>
+    <ul>
+        <li><strong>ApplicationDbContext.cs</strong>: The database context class that interacts with the database and defines the DbSets for the models (e.g., <code>Facility</code>, <code>Room</code>).</li>
+        <li><strong>Migrations/</strong>: This folder contains the migration files for updating the database schema based on model changes. Each migration file represents a change in the database schema.</li>
+        <li><strong>Repository/</strong>: This folder contains the repository classes that abstract database operations for specific models.</li>
+    </ul>
+    <ul>
+        <li><strong>FacilityRepository.cs</strong>: Repository class for handling CRUD operations related to the <code>Facility</code> model.</li>
+        <li><strong>RoomRepository.cs</strong>: Repository class for handling CRUD operations related to the <code>Room</code> model.</li>
+        <li><strong>UnitOfWork.cs</strong>: Implements the Unit of Work pattern, ensuring that all changes to the database are committed in a single transaction.</li>
+        <li><strong>IRepository/IUnitOfWork.cs</strong>: Interface definitions for the repository and unit of work patterns.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Models Directory</h2>
+    <p>The <strong>Models</strong> directory contains the classes that represent the data structures in the application.</p>
+    <ul>
+        <li><strong>Bill.cs</strong>: Model representing the billing information for users.</li>
+        <li><strong>Booking.cs</strong>: Model representing booking information for voyagers.</li>
+        <li><strong>ErrorViewModel.cs</strong>: A view model for error pages, typically used to display error messages.</li>
+        <li><strong>Facility.cs</strong>: Model representing the facility data.</li>
+        <li><strong>Room.cs</strong>: Model representing room data.</li>
+        <li><strong>ViewModels/FacilityVM.cs</strong>: A ViewModel for handling the data that will be passed to views related to <code>Facility</code>.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Views Directory</h2>
+    <p>The <strong>Views</strong> directory contains the Razor views that render HTML to the user.</p>
+    <ul>
+        <li><strong>Shared/</strong>: Contains shared views, such as layout pages, partial views, and validation scripts.</li>
+    </ul>
+    <ul>
+        <li><strong>_Layout.cshtml</strong>: The main layout view used across the application.</li>
+        <li><strong>_LoginPartial.cshtml</strong>: Partial view for displaying login information.</li>
+        <li><strong>_Notification.cshtml</strong>: Partial view for displaying notifications.</li>
+    </ul>
+    <ul>
+        <li><strong>_ViewImports.cshtml</strong>: Defines common imports for views, such as namespaces and Razor directives.</li>
+        <li><strong>_ViewStart.cshtml</strong>: Configures the layout and other settings for views globally.</li>
+    </ul>
+
+    <hr>
+
+    <h2>wwwroot Directory</h2>
+    <p>The <strong>wwwroot</strong> directory contains static files that are served directly to the client, such as images, stylesheets, and JavaScript files.</p>
+    <ul>
+        <li><strong>css/</strong>: Contains CSS files for styling the website.</li>
+    </ul>
+    <ul>
+        <li><strong>ShipWallpaper.jpg</strong>: An image used as the wallpaper for the site.</li>
+        <li><strong>site.css</strong>: The main CSS file for styling the site.</li>
+    </ul>
+    <ul>
+        <li><strong>js/</strong>: Contains JavaScript files for adding interactivity to the site.</li>
+    </ul>
+    <ul>
+        <li><strong>site.js</strong>: Custom JavaScript code for the application.</li>
+    </ul>
+    <ul>
+        <li><strong>lib/</strong>: Contains third-party libraries such as Bootstrap and jQuery.</li>
+    </ul>
+    <ul>
+        <li><strong>bootstrap/</strong>: Contains Bootstrap CSS and JS files for responsive design and UI components.</li>
+        <li><strong>jquery/</strong>: Contains jQuery files for DOM manipulation and AJAX operations.</li>
+        <li><strong>jquery-validation/</strong>: Contains jQuery validation scripts for form validation.</li>
+        <li><strong>jquery-validation-unobtrusive/</strong>: Contains scripts for unobtrusive validation using jQuery.</li>
+    </ul>
+
+</body>
+</html>
