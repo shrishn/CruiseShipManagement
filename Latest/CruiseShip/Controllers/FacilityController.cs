@@ -7,15 +7,15 @@ namespace CruiseShip.Controllers
 {
     public class FacilityController : Controller
     {
-        private readonly IFacilityRepository _facilityRepo;
-        public FacilityController(IFacilityRepository facilityRepo)
+        private readonly IUnitOfWork _unitOfWork;
+        public FacilityController(IUnitOfWork unitOfWork)
         {
-            _facilityRepo = facilityRepo;
+            _unitOfWork=unitOfWork;
         }
 
         public IActionResult Index()
         {
-            List<Facility> objFacilityList = _facilityRepo.GetAll().ToList();
+            List<Facility> objFacilityList = _unitOfWork.Facility.GetAll().ToList();
             return View(objFacilityList);
         }
 
@@ -29,8 +29,8 @@ namespace CruiseShip.Controllers
             if (ModelState.IsValid)
             {
 
-                _facilityRepo.Add(obj);
-                _facilityRepo.Save();
+                _unitOfWork.Facility.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Facility Created Successfully";
                 return RedirectToAction("Index");
             }
@@ -43,7 +43,7 @@ namespace CruiseShip.Controllers
             {
                 return NotFound();
             }
-            Facility facilityFromDb = _facilityRepo.Get(f=>f.Id==id);
+            Facility facilityFromDb = _unitOfWork.Facility.Get(f=>f.Id==id);
             if (facilityFromDb == null)
             {
                 return NotFound();
@@ -56,8 +56,8 @@ namespace CruiseShip.Controllers
         {
             if (ModelState.IsValid)
             {
-                _facilityRepo.Update(obj);
-                _facilityRepo.Save();
+                _unitOfWork.Facility.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Facility Updated Successfully";
                 return RedirectToAction("Index");
             }
@@ -70,7 +70,7 @@ namespace CruiseShip.Controllers
             {
                 return NotFound();
             }
-            Facility? facilityFromDb = _facilityRepo.Get(f => f.Id == id);
+            Facility? facilityFromDb = _unitOfWork.Facility.Get(f => f.Id == id);
 
             if (facilityFromDb == null)
             {
@@ -81,13 +81,13 @@ namespace CruiseShip.Controllers
         [HttpPost,ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
-            Facility? obj = _facilityRepo.Get(f => f.Id == id);
+            Facility? obj = _unitOfWork.Facility.Get(f => f.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _facilityRepo.Remove(obj);
-            _facilityRepo.Save ();
+            _unitOfWork.Facility.Remove(obj);
+            _unitOfWork.Save ();
             TempData["success"] = "Facility Deleted Successfully";
             return RedirectToAction("Index");
 

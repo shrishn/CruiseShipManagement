@@ -11,13 +11,21 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+// Add identity services for authentication and authorization, requiring email confirmation for sign-in
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    // Use Entity Framework Core to store identity data in the ApplicationDbContext
     .AddEntityFrameworkStores<ApplicationDbContext>()
+    // Add default token providers for account confirmation, password reset, etc.
     .AddDefaultTokenProviders();
-builder.Services.AddRazorPages();
+
+// Add support for Razor Pages
+
+// Add support for MVC pattern with controllers and views
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IFacilityRepository,FacilityRepository>();   
+// Register the FacilityRepository class to be used whenever the IFacilityRepository interface is requested.
+// This registration has a scoped lifetime, meaning a new instance of FacilityRepository will be created for each HTTP request.
+builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();   
 
 var app = builder.Build();
 
@@ -43,7 +51,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
+
 
 // Create roles and default admin user
 using (var scope = app.Services.CreateScope())

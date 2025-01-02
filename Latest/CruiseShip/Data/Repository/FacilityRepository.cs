@@ -11,10 +11,7 @@ namespace CruiseShip.Data.Repository
         {
             _db = db;
         }
-        public void Save()
-        {
-            _db.SaveChanges();
-        }
+       
 
         public void Update(Facility obj)
         {
