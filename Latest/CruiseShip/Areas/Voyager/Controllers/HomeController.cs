@@ -2,7 +2,7 @@ using System.Diagnostics;
 using CruiseShip.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CruiseShip.Controllers
+namespace CruiseShip.Areas.Voyager.Controllers
 {
     public class HomeController : Controller
     {

@@ -3,14 +3,14 @@ using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CruiseShip.Controllers
+namespace CruiseShip.Areas.Admin.Controllers
 {
     public class FacilityController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         public FacilityController(IUnitOfWork unitOfWork)
         {
-            _unitOfWork=unitOfWork;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
@@ -43,7 +43,7 @@ namespace CruiseShip.Controllers
             {
                 return NotFound();
             }
-            Facility facilityFromDb = _unitOfWork.Facility.Get(f=>f.Id==id);
+            Facility facilityFromDb = _unitOfWork.Facility.Get(f => f.Id == id);
             if (facilityFromDb == null)
             {
                 return NotFound();
@@ -76,9 +76,9 @@ namespace CruiseShip.Controllers
             {
                 return NotFound();
             }
-            return View(facilityFromDb); 
+            return View(facilityFromDb);
         }
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
             Facility? obj = _unitOfWork.Facility.Get(f => f.Id == id);
@@ -87,11 +87,11 @@ namespace CruiseShip.Controllers
                 return NotFound();
             }
             _unitOfWork.Facility.Remove(obj);
-            _unitOfWork.Save ();
+            _unitOfWork.Save();
             TempData["success"] = "Facility Deleted Successfully";
             return RedirectToAction("Index");
 
-            
+
         }
     }
 }

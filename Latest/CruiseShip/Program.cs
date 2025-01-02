@@ -50,7 +50,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Voyager}/{controller=Home}/{action=Index}/{id?}");
 
 
 // Create roles and default admin user
