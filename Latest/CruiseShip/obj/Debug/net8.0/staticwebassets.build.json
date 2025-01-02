@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f3nOWvL0t3qa10Tq7Zb6PAR1CC5BKSvtWTl6nEwhDEQ=",
+  "Hash": "/+nhEN9Mt84opAJSm85z1raE/FtYOdw+1fJQjjcEHzM=",
   "Source": "CruiseShip",
   "BasePath": "_content/CruiseShip",
   "Mode": "Default",
@@ -1291,8 +1291,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "lpzu93n3o3",
-      "Integrity": "tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI=",
+      "Fingerprint": "8qv5pvef7m",
+      "Integrity": "IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CruiseShip.styles.css"
@@ -1312,11 +1312,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "lpzu93n3o3",
-      "Integrity": "tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI=",
+      "Fingerprint": "8qv5pvef7m",
+      "Integrity": "IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CruiseShip.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\ShipWallpaper.jpg",
+      "SourceId": "CruiseShip",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\",
+      "BasePath": "_content/CruiseShip",
+      "RelativePath": "css/ShipWallpaper#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cramm62mup",
+      "Integrity": "+C3N/idvNDRKttf+pcwliI7u45ON58gs76uDalZtsio=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ShipWallpaper.jpg"
     },
     {
       "Identity": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\site.css",
@@ -1333,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "e64ayundca",
+      "Integrity": "WoIqKe9Re97hHqQCT47EGDL5Vc/re8jFQrYCIQVbnY4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2581,6 +2602,96 @@
   ],
   "Endpoints": [
     {
+      "Route": "CruiseShip.8qv5pvef7m.bundle.scp.css",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CruiseShip.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 06:10:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8qv5pvef7m"
+        },
+        {
+          "Name": "label",
+          "Value": "CruiseShip.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw="
+        }
+      ]
+    },
+    {
+      "Route": "CruiseShip.8qv5pvef7m.styles.css",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CruiseShip.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 06:10:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8qv5pvef7m"
+        },
+        {
+          "Name": "label",
+          "Value": "CruiseShip.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw="
+        }
+      ]
+    },
+    {
       "Route": "CruiseShip.bundle.scp.css",
       "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CruiseShip.bundle.scp.css",
       "Selectors": [],
@@ -2591,7 +2702,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1118"
         },
         {
           "Name": "Content-Type",
@@ -2599,11 +2710,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI=\""
+          "Value": "\"IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 10:20:58 GMT"
+          "Value": "Thu, 02 Jan 2025 06:10:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2613,97 +2724,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI="
-        }
-      ]
-    },
-    {
-      "Route": "CruiseShip.lpzu93n3o3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CruiseShip.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1128"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 10:20:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lpzu93n3o3"
-        },
-        {
-          "Name": "label",
-          "Value": "CruiseShip.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI="
-        }
-      ]
-    },
-    {
-      "Route": "CruiseShip.lpzu93n3o3.styles.css",
-      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CruiseShip.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1128"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 10:20:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lpzu93n3o3"
-        },
-        {
-          "Name": "label",
-          "Value": "CruiseShip.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI="
+          "Value": "sha256-IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw="
         }
       ]
     },
@@ -2718,7 +2739,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1118"
         },
         {
           "Name": "Content-Type",
@@ -2726,11 +2747,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI=\""
+          "Value": "\"IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 10:20:58 GMT"
+          "Value": "Thu, 02 Jan 2025 06:10:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2740,13 +2761,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tyr6Hw8eri6Cm0ULeFM6Izng94CB/HHagTw+xcC90qI="
+          "Value": "sha256-IJtZ5GEU1dG9+YbNE7Ls6PmB3m/F6gZ0DOrxZELEihw="
         }
       ]
     },
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\site.css",
+      "Route": "css/ShipWallpaper.cramm62mup.jpg",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\ShipWallpaper.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2755,19 +2776,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "2255732"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"+C3N/idvNDRKttf+pcwliI7u45ON58gs76uDalZtsio=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 05:54:19 GMT"
+          "Value": "Thu, 02 Jan 2025 05:53:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2777,15 +2798,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "cramm62mup"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/ShipWallpaper.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-+C3N/idvNDRKttf+pcwliI7u45ON58gs76uDalZtsio="
+        }
+      ]
+    },
+    {
+      "Route": "css/ShipWallpaper.jpg",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\ShipWallpaper.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2255732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+C3N/idvNDRKttf+pcwliI7u45ON58gs76uDalZtsio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 05:53:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+C3N/idvNDRKttf+pcwliI7u45ON58gs76uDalZtsio="
         }
       ]
     },
@@ -2800,7 +2858,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "486"
         },
         {
           "Name": "Content-Type",
@@ -2808,11 +2866,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"WoIqKe9Re97hHqQCT47EGDL5Vc/re8jFQrYCIQVbnY4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 05:54:19 GMT"
+          "Value": "Thu, 02 Jan 2025 05:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2822,7 +2880,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-WoIqKe9Re97hHqQCT47EGDL5Vc/re8jFQrYCIQVbnY4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.e64ayundca.css",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "486"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WoIqKe9Re97hHqQCT47EGDL5Vc/re8jFQrYCIQVbnY4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 05:55:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e64ayundca"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WoIqKe9Re97hHqQCT47EGDL5Vc/re8jFQrYCIQVbnY4="
         }
       ]
     },

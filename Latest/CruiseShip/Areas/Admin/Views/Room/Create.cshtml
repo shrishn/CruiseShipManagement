@@ -1,28 +1,30 @@
-﻿@model Facility
+﻿@model CruiseShip.Models.Room
+
 @{
-	ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create";
 }
+
 <form method="post">
 	<div class="border p-3 mt-4 text-dark bg-white " style="border-radius:30px">
 		<div class="row pb-2">
-			<h2 class="text-dark">Create Facility</h2>
-			
+			<h2 class="text-dark">Create Room</h2>
+
 		</div>
-		<hr class="m-0 mb-2"/>
+		<hr class="m-0 mb-2" />
 		<div asp-validation-summary="All"></div>
 		<div class="mb-3">
-			<label asp-for="Name" class="mb-1"></label>
-			<input asp-for="Name"  class="form-control"/>
-			<span asp-validation-for="Name" class="text-danger"></span>
+			<label asp-for="RoomNumber" class="mb-1"></label>
+			<input asp-for="RoomNumber" class="form-control" />
+			<span asp-validation-for="RoomNumber" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="Description" class="mb-1"></label>
-			<input asp-for="Description" class="form-control" />
-			<span asp-validation-for="Description" class="text-danger"></span>
+			<label asp-for="Type" class="mb-1"></label>
+			<input asp-for="Type" class="form-control" />
+			<span asp-validation-for="Type" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label asp-for="Fee" class="mb-1"></label>
-			<input  asp-for="Fee" class="form-control" />
+			<input asp-for="Fee" class="form-control" />
 			<span asp-validation-for="Fee" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
@@ -40,16 +42,16 @@
 				<button type="submit" class="btn btn-dark form-control">Create</button>
 			</div>
 			<div class="col-6 col-md-3">
-				<a asp-controller="Facility" asp-action="Index" class="btn btn-outline-dark form-control">Back to List</a>
+				<a asp-controller="Room" asp-action="Index" class="btn btn-outline-dark form-control">Back to List</a>
 			</div>
 		</div>
 	</div>
-	
+
 </form>
 
 
-@section Scripts{
+@section Scripts {
 	@{
-		<partial name="_ValidationScriptsPartial"/>
+		<partial name="_ValidationScriptsPartial" />
 	}
 }

@@ -48,7 +48,7 @@ namespace CruiseShip.Data
                .OnDelete(DeleteBehavior.Restrict);
             // Configure relationships for Room
             modelBuilder.Entity<Room>()
-                .HasOne(r => r.CreatedByUser)
+                .HasOne<IdentityUser>()
                 .WithMany()
                 .HasForeignKey(r => r.CreatedBy)
                 .OnDelete(DeleteBehavior.Restrict);

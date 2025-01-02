@@ -1,3 +1,4 @@
+wwwroot\css\ShipWallpaper.jpg
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js

@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CruiseShip.bundle.scp.css",
-      "PackagePath": "staticwebassets\\CruiseShip.lpzu93n3o3.bundle.scp.css"
+      "PackagePath": "staticwebassets\\CruiseShip.8qv5pvef7m.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\ShipWallpaper.jpg",
+      "PackagePath": "staticwebassets\\css\\ShipWallpaper.jpg"
     },
     {
       "Id": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\css\\site.css",

@@ -7,10 +7,12 @@ namespace CruiseShip.Data.Repository
     {
         private readonly ApplicationDbContext _db;
         public IFacilityRepository Facility { get; private set; }
+        public IRoomRepository Room { get; private set; }
         public UnitOfWork(ApplicationDbContext db) 
         {
             _db = db;
             Facility = new FacilityRepository(_db);
+            Room = new RoomRepository(_db);
         }
         
 
