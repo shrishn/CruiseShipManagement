@@ -25,7 +25,7 @@ namespace CruiseShip.Areas.Admin.Controllers
             return View(objFacilityList);
         }
 
-        public IActionResult Create()
+        public IActionResult Upsert(int? id)
         {
             var adminRoleId = _db.Roles.Where(r => r.Name == "Admin").Select(r => r.Id).FirstOrDefault();
             var adminUsers = from user in _db.Users
@@ -42,10 +42,19 @@ namespace CruiseShip.Areas.Admin.Controllers
                 AdminUsers = adminUsers.ToList()
 
             };
-            return View(facilityVM);
+            if (id == null)
+            {
+                return View(facilityVM);
+            }
+            else
+            {
+                facilityVM.Facility = _unitOfWork.Facility.Get(f => f.Id == id);
+                
+                return View(facilityVM);
+            }
         }
         [HttpPost]
-        public IActionResult Create(FacilityVM obj)
+        public IActionResult Upsert(FacilityVM obj,IFormFile? file)
         {
             
             if (ModelState.IsValid)
@@ -71,23 +80,9 @@ namespace CruiseShip.Areas.Admin.Controllers
                 return View(obj);
             }
             
-            return View();
 
         }
-        public IActionResult Edit(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Facility facilityFromDb = _unitOfWork.Facility.Get(f => f.Id == id);
-            if (facilityFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(facilityFromDb);
-
-        }
+       
         [HttpPost]
         public IActionResult Edit(Facility obj)
         {

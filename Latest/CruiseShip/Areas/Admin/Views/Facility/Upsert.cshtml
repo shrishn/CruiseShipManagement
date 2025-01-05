@@ -4,9 +4,10 @@
 	ViewData["Title"] = "Create";
 }
 <form method="post" enctype="multipart/form-data">
+	<input ask-for="Facility.Id" hidden/>
 	<div class="border p-3 mt-4 text-dark bg-white " style="border-radius:30px">
 		<div class="row pb-2">
-			<h2 class="text-dark">Create Facility</h2>
+			<h2 class="text-dark">@(Model.Facility.Id!=0?"Update":"Create") Facility</h2>
 			
 		</div>
 		<hr class="m-0 mb-2"/>
