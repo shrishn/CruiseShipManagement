@@ -1,11 +1,14 @@
 ﻿@model FacilityVM
 
 @{
-	ViewData["Title"] = "Create";
+	ViewData["Title"] = "Upsert";
 }
 <form method="post" enctype="multipart/form-data">
-	<input ask-for="Facility.Id" hidden/>
-	<div class="border p-3 mt-4 text-dark bg-white " style="border-radius:30px">
+	<input asp-for="Facility.Id" hidden/>
+	<input asp-for="Facility.ImageURL" hidden />
+	<div class="row">
+		<div class="col-10">
+			<div class="border p-3 mt-4 text-dark bg-white " style="border-radius:30px">
 		<div class="row pb-2">
 			<h2 class="text-dark">@(Model.Facility.Id!=0?"Update":"Create") Facility</h2>
 			
@@ -34,7 +37,17 @@
 		</div>
 		<div class="mb-3">
 			<label asp-for="Facility.ImageURL" class="mb-1"></label>
-			<input type="file" class="form-control" />
+			@if (Model.Facility.Id != 0 && !string.IsNullOrEmpty(Model.Facility.ImageURL.ToString()))
+			{
+				<div class="mb-3 d-flex flex-column justify-content-center align-items-center">
+					<img class="rounded-3" src="@Model.Facility.ImageURL.ToString()" alt="Facility Image" style="max-width: 500px; max-height: 500px;" />
+					<p>Current Image</p>
+				</div>
+				
+				<label for="file">Upload New Image</label>
+			}
+			<input type="file" name="file" class="form-control" />
+			
 			<span asp-validation-for="Facility.ImageURL" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
@@ -46,11 +59,23 @@
 		</div>
 		<div class="row">
 			<div class="col-6 col-md-3">
-				<button type="submit" class="btn btn-dark form-control">Create</button>
+				@if (Model.Facility.Id!=0){
+					<button type="submit" class="btn btn-dark form-control">Update</button>
+				}
+				else{
+					<button type="submit" class="btn btn-dark form-control">Create</button>
+				}
+				
 			</div>
 			<div class="col-6 col-md-3">
 				<a asp-controller="Facility" asp-action="Index" class="btn btn-outline-dark form-control">Back to List</a>
 			</div>
+		</div>
+	</div>
+	
+		</div>
+		<div class="col-2">
+
 		</div>
 	</div>
 	

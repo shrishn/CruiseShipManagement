@@ -13,33 +13,41 @@
         <a asp-controller="Facility" asp-action="Upsert" class="btn btn-dark"> <i class="bi bi-plus-circle"></i> Create New Facility </a>
     </div>
 </div>
-<div class="table-responsive">
-    <table class="table table-bordered table-hover table-secondary table-striped">
+<div class="table-responsive bg-white rounded-4 p-3">
+    <table id="tblData" class="table table-bordered table-hover table-secondary table-striped">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Fee</th>
                 <th>Available Slots</th>
+                <th>Created By</th>
+                <th>Image</th>
                 <th></th>
+                
             </tr>
         </thead>
-        <tbody>
-            @foreach (var facility in Model)
-            {
-                <tr>
-                    <td>@facility.Name</td>
-                    <td>@facility.Description</td>
-                    <td>@facility.Fee</td>
-                    <td>@facility.AvailableSlots</td>
-                    <td>
-                        <div class=" btn-group" role="group">
-                            <a asp-controller="Facility" asp-action="Upsert" asp-route-id="@facility.Id" class="btn btn-dark mx-2">Edit <i class="bi bi-pencil-square"></i> </a>
-                            <a asp-controller="Facility" asp-action="Delete" asp-route-id="@facility.Id" class="btn btn-danger mx-2">Delete <i class="bi bi-trash3-fill"></i> </a>
-                        </div>
-                    </td>
-                </tr>
-            }
-        </tbody>
+        @* <tbody> *@
+        @*     @foreach (var facility in Model) *@
+        @*     { *@
+        @*         <tr> *@
+        @*             <td>@facility.Name</td> *@
+        @*             <td>@facility.Description</td> *@
+        @*             <td>@facility.Fee</td> *@
+        @*             <td>@facility.AvailableSlots</td> *@
+        @*             <td><img class="rounded-3" src="@facility.ImageURL" alt="Facility Image" style="max-width: 100px; max-height: 100px;" /></td> *@
+        @*             <td>@facility.CreatedByUser.UserName</td> *@
+        @*             <td> *@
+        @*                 <div class="btn-group" role="group"> *@
+        @*                     <a asp-controller="Facility" asp-action="Upsert" asp-route-id="@facility.Id" class="btn btn-dark mx-2">Edit <i class="bi bi-pencil-square"></i> </a> *@
+        @*                     <a asp-controller="Facility" asp-action="Delete" asp-route-id="@facility.Id" class="btn btn-danger mx-2">Delete <i class="bi bi-trash3-fill"></i> </a> *@
+        @*                 </div> *@
+        @*             </td> *@
+        @*         </tr> *@
+        @*     } *@
+        @* </tbody> *@
     </table>
 </div>
+@section Scripts{
+    <script src="~/js/facility.js"></script>
+}

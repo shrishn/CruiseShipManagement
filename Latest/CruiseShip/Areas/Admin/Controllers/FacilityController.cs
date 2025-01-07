@@ -12,15 +12,17 @@ namespace CruiseShip.Areas.Admin.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly IUnitOfWork _unitOfWork;
-        public FacilityController(IUnitOfWork unitOfWork,ApplicationDbContext db)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public FacilityController(IUnitOfWork unitOfWork,ApplicationDbContext db,IWebHostEnvironment webHostEnvironment)
         {
             _unitOfWork = unitOfWork;
             _db = db;
+            _webHostEnvironment = webHostEnvironment;   
         }
 
         public IActionResult Index()
         {
-            List<Facility> objFacilityList = _unitOfWork.Facility.GetAll().ToList();
+            List<Facility> objFacilityList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
             
             return View(objFacilityList);
         }
@@ -42,7 +44,7 @@ namespace CruiseShip.Areas.Admin.Controllers
                 AdminUsers = adminUsers.ToList()
 
             };
-            if (id == null)
+            if (id == null || id==0)
             {
                 return View(facilityVM);
             }
@@ -54,15 +56,44 @@ namespace CruiseShip.Areas.Admin.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Upsert(FacilityVM obj,IFormFile? file)
+        public IActionResult Upsert(FacilityVM obj, IFormFile? file)
         {
-            
+
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (file != null)
+                {
+                    string filename = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
+                    if (!string.IsNullOrEmpty(obj.Facility.ImageURL))
+                    {
+                        var oldImagePath = Path.Combine(wwwRootPath, obj.Facility.ImageURL.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImagePath))
+                            System.IO.File.Delete(oldImagePath);
 
-                _unitOfWork.Facility.Add(obj.Facility);
-                _unitOfWork.Save();
-                TempData["success"] = "Facility Created Successfully";
+                    }
+                    using (var fileStream = new FileStream(Path.Combine(facilityPath, filename), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    obj.Facility.ImageURL = @"\images\facility\" + filename;
+                }
+                if (obj.Facility.Id == 0)
+                {
+                    _unitOfWork.Facility.Add(obj.Facility);
+                    _unitOfWork.Save();
+                    TempData["success"] = "Facility Created Successfully";
+
+                }
+                else
+                {
+                    _unitOfWork.Facility.Update(obj.Facility);
+                    _unitOfWork.Save();
+                    TempData["success"] = "Facility Updated Successfully";
+
+                }
+
                 return RedirectToAction("Index");
             }
             else
@@ -79,23 +110,8 @@ namespace CruiseShip.Areas.Admin.Controllers
                 obj.AdminUsers = adminUsers.ToList();
                 return View(obj);
             }
-            
-
         }
-       
-        [HttpPost]
-        public IActionResult Edit(Facility obj)
-        {
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Facility.Update(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Facility Updated Successfully";
-                return RedirectToAction("Index");
-            }
-            return View();
 
-        }
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
@@ -110,6 +126,7 @@ namespace CruiseShip.Areas.Admin.Controllers
             }
             return View(facilityFromDb);
         }
+
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
@@ -118,12 +135,24 @@ namespace CruiseShip.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
+            var ImagePath = Path.Combine(wwwRootPath, obj.ImageURL.TrimStart('\\'));
+            if (System.IO.File.Exists(ImagePath))
+                System.IO.File.Delete(ImagePath);
             _unitOfWork.Facility.Remove(obj);
             _unitOfWork.Save();
             TempData["success"] = "Facility Deleted Successfully";
             return RedirectToAction("Index");
-
-
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Facility> objFacilityList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
+            return Json(new { data = objFacilityList });
+        }
+        #endregion
     }
 }
