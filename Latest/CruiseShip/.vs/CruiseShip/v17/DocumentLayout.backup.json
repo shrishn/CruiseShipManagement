@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\",
+  "WorkspaceRootPath": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\wwwroot\\js\\facility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\shrish\\documents\\my codes\\cognizant\\dot net standard\\idp\\cruiseshipmanagement\\latest\\cruiseship\\wwwroot\\js\\facility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:wwwroot\\js\\facility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\areas\\admin\\controllers\\facilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\admin\\controllers\\facilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\shrish\\documents\\my codes\\cognizant\\dot net standard\\idp\\cruiseshipmanagement\\latest\\cruiseship\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\areas\\admin\\views\\facility\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\shrish\\documents\\my codes\\cognizant\\dot net standard\\idp\\cruiseshipmanagement\\latest\\cruiseship\\areas\\admin\\views\\facility\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\admin\\views\\facility\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\shrish\\documents\\my codes\\cognizant\\dot net standard\\idp\\cruiseshipmanagement\\latest\\cruiseship\\views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\shrish\\documents\\my codes\\cognizant\\dot net standard\\idp\\cruiseshipmanagement\\latest\\cruiseship\\areas\\admin\\controllers\\facilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\admin\\controllers\\facilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\shrish\\documents\\my codes\\cognizant\\dot net standard\\idp\\cruiseshipmanagement\\latest\\cruiseship\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +34,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Views\\Facility\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Facility\\Index.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Views\\Facility\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Facility\\Index.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvysAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "_Notification.cshtml",
+              "DocumentMoniker": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_Notification.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Notification.cshtml",
+              "ToolTip": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_Notification.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Notification.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T07:32:40.08Z",
+              "WhenOpened": "2025-01-08T17:41:19.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T17:34:40.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "facility.js",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\js\\facility.js",
+              "DocumentMoniker": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\js\\facility.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\facility.js",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\js\\facility.js",
+              "ToolTip": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\js\\facility.js",
               "RelativeToolTip": "wwwroot\\js\\facility.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAwDUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-01-07T07:22:42.848Z",
+              "WhenOpened": "2025-01-08T17:27:07.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FacilityController.cs",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Controllers\\FacilityController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\FacilityController.cs",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Controllers\\FacilityController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\FacilityController.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAqwJYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T07:16:06.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADkAAABAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Views\\Facility\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Facility\\Index.cshtml",
+              "ToolTip": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Views\\Facility\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Facility\\Index.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T07:14:11.085Z",
+              "WhenOpened": "2025-01-08T17:27:00.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FacilityController.cs",
+              "DocumentMoniker": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Controllers\\FacilityController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\FacilityController.cs",
+              "ToolTip": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Controllers\\FacilityController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\FacilityController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAqwIsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T17:23:40.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\SHRISH\\Documents\\My Codes\\Cognizant\\Dot Net Standard\\IDP\\CruiseShipManagement\\Latest\\CruiseShip\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-07T18:48:47.474Z",
               "EditorCaption": ""
             }
           ]

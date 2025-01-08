@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CruiseShip")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8504f86c95c4d9c588527576ced1a871ba0a834")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3223bc2f04f0fb20dd2bc02ec3edb35097605fcf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CruiseShip")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CruiseShip")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

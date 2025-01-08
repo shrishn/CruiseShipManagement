@@ -112,39 +112,23 @@ namespace CruiseShip.Areas.Admin.Controllers
             }
         }
 
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Facility? facilityFromDb = _unitOfWork.Facility.Get(f => f.Id == id);
+        //public IActionResult Delete(int? id)
+        //{
+        //    if (id == null || id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    Facility? facilityFromDb = _unitOfWork.Facility.Get(f => f.Id == id);
 
-            if (facilityFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(facilityFromDb);
-        }
+        //    if (facilityFromDb == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(facilityFromDb);
+        //}
 
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id)
-        {
-            Facility? obj = _unitOfWork.Facility.Get(f => f.Id == id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-            string wwwRootPath = _webHostEnvironment.WebRootPath;
-            string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
-            var ImagePath = Path.Combine(wwwRootPath, obj.ImageURL.TrimStart('\\'));
-            if (System.IO.File.Exists(ImagePath))
-                System.IO.File.Delete(ImagePath);
-            _unitOfWork.Facility.Remove(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Facility Deleted Successfully";
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        
 
         #region API CALLS
         [HttpGet]
@@ -153,6 +137,23 @@ namespace CruiseShip.Areas.Admin.Controllers
             List<Facility> objFacilityList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
             return Json(new { data = objFacilityList });
         }
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            Facility? obj = _unitOfWork.Facility.Get(f => f.Id == id);
+            if (obj == null)
+            {
+                return Json(new {success=false,message="Error while deleting"});
+            }
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
+            var ImagePath = Path.Combine(wwwRootPath, obj.ImageURL.TrimStart('\\'));
+            if (System.IO.File.Exists(ImagePath))
+                System.IO.File.Delete(ImagePath);
+            _unitOfWork.Facility.Remove(obj);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Delete Successful" });
+            }
         #endregion
     }
 }

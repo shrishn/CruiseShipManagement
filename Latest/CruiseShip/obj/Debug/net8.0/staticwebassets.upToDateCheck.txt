@@ -1,7 +1,9 @@
 wwwroot\css\ShipWallpaper.jpg
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\facility\0163de56-0276-4632-9502-09436ec32aaa.jpg
 wwwroot\images\facility\09b75bc0-b5f3-4c27-8319-22a829413b20.jpg
+wwwroot\images\facility\1f74eef7-7877-437a-a528-54ee5c61576f.jpeg
 wwwroot\images\facility\26befc2f-8e9c-4315-805b-b6bc3f032066.jpg
 wwwroot\images\facility\3f8a1b9b-b2df-4b2d-a4bb-d8a2d5d56d88.jpg
 wwwroot\images\facility\6cc3a254-a12d-4706-b236-7c6c177c764d.jpg
