@@ -1,6 +1,9 @@
 html {
   font-size: 14px;
 }
+* {
+    font-family: "Poppins", serif;
+}
 
 @media (min-width: 768px) {
   html {
@@ -21,8 +24,4 @@ body {
   margin-bottom: 60px;
 
 }
-body {
-    background-image: url('ShipWallpaper.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
-}
+ 

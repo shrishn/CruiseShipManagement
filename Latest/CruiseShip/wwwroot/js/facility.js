@@ -23,7 +23,7 @@ function loadDataTable() {
             {
                 data: 'id',
                 render: function (data) {
-                    return `<div class="btn-group" role="group">
+                    return `<div>
                                 <a href="facility/upsert?id=${data}" class="btn btn-dark mx-2">Edit <i class="bi bi-pencil-square"></i> </a>
                                 <a onClick=Delete('facility/delete/${data}') class="btn btn-danger mx-2">Delete <i class="bi bi-trash3-fill"></i> </a>
                             </div>`;
