@@ -112,23 +112,7 @@ namespace CruiseShip.Areas.Admin.Controllers
             }
         }
 
-        //public IActionResult Delete(int? id)
-        //{
-        //    if (id == null || id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    Facility? facilityFromDb = _unitOfWork.Facility.Get(f => f.Id == id);
-
-        //    if (facilityFromDb == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(facilityFromDb);
-        //}
-
-        //[HttpPost, ActionName("Delete")]
-        
+                
 
         #region API CALLS
         [HttpGet]

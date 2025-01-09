@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using CruiseShip.Data.Repository;
+using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,20 +9,18 @@ namespace CruiseShip.Areas.Voyager.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
+            _unitOfWork = unitOfWork;
             _logger = logger;
         }
-
-        public IActionResult Index()
+        
+        public IActionResult Facility()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            IEnumerable<Facility> faciltiesList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser");
+            return View(faciltiesList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
