@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CruiseShip.Areas.Voyager.Controllers
 {
+    [Area("Voyager")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -16,7 +17,10 @@ namespace CruiseShip.Areas.Voyager.Controllers
             _unitOfWork = unitOfWork;
             _logger = logger;
         }
-        
+        public IActionResult Index()
+        {
+            return View();
+        }
         public IActionResult Facility()
         {
             IEnumerable<Facility> faciltiesList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser");

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CruiseShip.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class FacilityController : Controller
     {
         private readonly ApplicationDbContext _db;

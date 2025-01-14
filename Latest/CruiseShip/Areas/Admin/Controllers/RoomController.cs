@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CruiseShip.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class RoomController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

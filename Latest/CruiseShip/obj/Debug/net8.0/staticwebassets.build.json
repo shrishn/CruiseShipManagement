@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+akjNO7SBAJtz7BIAOELQKpLcDXDUpz+92cjvA6MUQM=",
+  "Hash": "1P/N8TBhT4lJNTXDIqzYwJmtSwsUshqOavoOvNp9TjY=",
   "Source": "CruiseShip",
   "BasePath": "_content/CruiseShip",
   "Mode": "Default",
@@ -1508,6 +1508,27 @@
       "OriginalItemSpec": "wwwroot\\images\\facility\\3f8a1b9b-b2df-4b2d-a4bb-d8a2d5d56d88.jpg"
     },
     {
+      "Identity": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\images\\facility\\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg",
+      "SourceId": "CruiseShip",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\",
+      "BasePath": "_content/CruiseShip",
+      "RelativePath": "images/facility/4ef166a3-f7fe-40ef-b13e-24f03711ad65#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lfrm5vzrtu",
+      "Integrity": "YSXvd2TNcX9DZUh1qciSk5YgbPhFH5IgQBcU5Nwrrt0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\facility\\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg"
+    },
+    {
       "Identity": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\images\\facility\\6cc3a254-a12d-4706-b236-7c6c177c764d.jpg",
       "SourceId": "CruiseShip",
       "SourceType": "Discovered",
@@ -2918,7 +2939,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 06:23:50 GMT"
+          "Value": "Mon, 13 Jan 2025 07:26:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2963,7 +2984,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 06:23:50 GMT"
+          "Value": "Mon, 13 Jan 2025 07:26:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3008,7 +3029,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 06:23:50 GMT"
+          "Value": "Mon, 13 Jan 2025 07:26:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3045,7 +3066,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 06:23:50 GMT"
+          "Value": "Mon, 13 Jan 2025 07:26:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6014,6 +6035,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-YAecYVXMjeOtUZGGNJhFGYqgMDvxMN/iCsWydByU0lc="
+        }
+      ]
+    },
+    {
+      "Route": "images/facility/4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\images\\facility\\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1195300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YSXvd2TNcX9DZUh1qciSk5YgbPhFH5IgQBcU5Nwrrt0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 05:59:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YSXvd2TNcX9DZUh1qciSk5YgbPhFH5IgQBcU5Nwrrt0="
+        }
+      ]
+    },
+    {
+      "Route": "images/facility/4ef166a3-f7fe-40ef-b13e-24f03711ad65.lfrm5vzrtu.jpg",
+      "AssetFile": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\wwwroot\\images\\facility\\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1195300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YSXvd2TNcX9DZUh1qciSk5YgbPhFH5IgQBcU5Nwrrt0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 05:59:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lfrm5vzrtu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/facility/4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YSXvd2TNcX9DZUh1qciSk5YgbPhFH5IgQBcU5Nwrrt0="
         }
       ]
     },

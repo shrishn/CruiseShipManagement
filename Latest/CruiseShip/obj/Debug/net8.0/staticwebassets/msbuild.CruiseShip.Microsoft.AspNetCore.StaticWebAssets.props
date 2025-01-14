@@ -180,6 +180,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\facility\3f8a1b9b-b2df-4b2d-a4bb-d8a2d5d56d88.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\facility\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CruiseShip</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CruiseShip</BasePath>
+      <RelativePath>images/facility/4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lfrm5vzrtu</Fingerprint>
+      <Integrity>YSXvd2TNcX9DZUh1qciSk5YgbPhFH5IgQBcU5Nwrrt0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\facility\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\facility\6cc3a254-a12d-4706-b236-7c6c177c764d.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>CruiseShip</SourceId>
