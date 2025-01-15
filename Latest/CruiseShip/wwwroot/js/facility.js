@@ -51,7 +51,6 @@ function Delete(url) {
                 type: 'DELETE',
                 success: function (data) {
                     dataTable.ajax.reload();
-                    console.log(data.message);
                     toastr.success(data.message);
                 }
             })

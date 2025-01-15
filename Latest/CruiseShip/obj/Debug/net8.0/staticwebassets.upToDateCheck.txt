@@ -13,7 +13,7 @@ wwwroot\images\facility\81cec0ce-4971-42ad-8612-b881987260a0.jpg
 wwwroot\images\facility\89493269-6e5c-43d2-8dfa-52a972d699ae.jpg
 wwwroot\images\facility\b62bd7ff-2802-4853-85fb-a65944c6766d.jpg
 wwwroot\images\facility\d119d24c-1a02-4623-8cd9-8d45c01e6425.jpg
-wwwroot\images\facility\dc3b1bf1-f22d-4787-808f-eb3f0ae51649.jpg
+wwwroot\images\facility\f27df5cf-11d6-4f9f-8ed0-eedceec8b7a7.jpeg
 wwwroot\js\facility.js
 wwwroot\js\newFile.js
 wwwroot\js\site.js

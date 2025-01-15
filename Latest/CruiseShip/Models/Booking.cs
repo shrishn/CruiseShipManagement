@@ -25,7 +25,7 @@ namespace CruiseShip.Models
 
         [Required]
         [MaxLength(50)]
-        public string Status { get; set; }
+        public string Status { get; set; }//Pending, Booked, Cancelled, Rejected
 
         [ForeignKey("VoyagerId")]
         public IdentityUser Voyager { get; set; }
