@@ -2,12 +2,14 @@
 using CruiseShip.Data.Repository;
 using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CruiseShip.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class RoomController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

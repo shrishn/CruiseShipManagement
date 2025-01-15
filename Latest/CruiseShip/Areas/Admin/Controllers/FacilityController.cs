@@ -2,6 +2,7 @@
 using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
 using CruiseShip.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace CruiseShip.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles="Admin")]
     public class FacilityController : Controller
     {
         private readonly ApplicationDbContext _db;
