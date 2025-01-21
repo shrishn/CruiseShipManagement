@@ -1,46 +1,46 @@
-﻿@model FacilityVM
+﻿@model Facility
 
 @{
 	ViewData["Title"] = "Upsert";
 }
 <form method="post" enctype="multipart/form-data">
-	<input asp-for="Facility.Id" hidden/>
-	<input asp-for="Facility.ImageURL" hidden />
+	<input asp-for="Id" hidden/>
+	<input asp-for="ImageURL" hidden />
 	<div class="row">
 		<div class="col-10">
 			<div class="border p-3 mt-4 text-dark bg-white " style="border-radius:30px">
 		<div class="row pb-2">
-			<h2 class="text-dark">@(Model.Facility.Id!=0?"Update":"Create") Facility</h2>
+			<h2 class="text-dark">@(Model.Id!=0?"Update":"Create") Facility</h2>
 			
 		</div>
 		<hr class="m-0 mb-2"/>
 		<div asp-validation-summary="All"></div>
 		<div class="mb-3">
-			<label asp-for="Facility.Name" class="mb-1"></label>
-			<input asp-for="Facility.Name" class="form-control" />
-			<span asp-validation-for="Facility.Name" class="text-danger"></span>
+			<label asp-for="Name" class="mb-1"></label>
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="Facility.Description" class="mb-1"></label>
-			<input asp-for="Facility.Description" class="form-control" />
-			<span asp-validation-for="Facility.Description" class="text-danger"></span>
+			<label asp-for="Description" class="mb-1"></label>
+			<input asp-for="Description" class="form-control" />
+			<span asp-validation-for="Description" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="Facility.Fee" class="mb-1"></label>
-			<input asp-for="Facility.Fee" class="form-control" />
-			<span asp-validation-for="Facility.Fee" class="text-danger"></span>
+			<label asp-for="Fee" class="mb-1"></label>
+			<input asp-for="Fee" class="form-control" />
+			<span asp-validation-for="Fee" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="Facility.AvailableSlots" class="mb-1"></label>
-			<input asp-for="Facility.AvailableSlots" class="form-control" />
+			<label asp-for="AvailableSlots" class="mb-1"></label>
+			<input asp-for="AvailableSlots" class="form-control" />
 			 
 		</div>
 		<div class="mb-3">
-			<label asp-for="Facility.ImageURL" class="mb-1"></label>
-			@if (Model.Facility.Id != 0 && !string.IsNullOrEmpty(Model.Facility.ImageURL.ToString()))
+			<label asp-for="ImageURL" class="mb-1"></label>
+			@if (Model.Id != 0 && !string.IsNullOrEmpty(Model.ImageURL.ToString()))
 			{
 				<div class="mb-3 d-flex flex-column justify-content-center align-items-center">
-					<img class="rounded-3" src="@Model.Facility.ImageURL.ToString()" alt="Facility Image" style="max-width: 500px; max-height: 500px;" />
+					<img class="rounded-3" src="@Model.ImageURL.ToString()" alt="Facility Image" style="max-width: 500px; max-height: 500px;" />
 					<p>Current Image</p>
 				</div>
 				
@@ -48,18 +48,12 @@
 			}
 			<input type="file" name="file" class="form-control" />
 			
-			<span asp-validation-for="Facility.ImageURL" class="text-danger"></span>
+			<span asp-validation-for="ImageURL" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
-			<label asp-for="Facility.CreatedBy" class="mb-1"></label>
-			<select asp-for="Facility.CreatedBy" asp-items="@Model.AdminUsers" class="form-select">
-				<option disabled selected>--Select Admin--</option>
-			</select>
-			<span asp-validation-for="Facility.CreatedBy" class="text-danger"></span>
-		</div>
+		
 		<div class="row">
 			<div class="col-6 col-md-3">
-				@if (Model.Facility.Id!=0){
+				@if (Model.Id!=0){
 					<button type="submit" class="btn btn-dark form-control">Update</button>
 				}
 				else{

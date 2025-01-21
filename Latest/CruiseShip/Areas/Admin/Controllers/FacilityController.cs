@@ -16,11 +16,14 @@ namespace CruiseShip.Areas.Admin.Controllers
         private readonly ApplicationDbContext _db;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public FacilityController(IUnitOfWork unitOfWork,ApplicationDbContext db,IWebHostEnvironment webHostEnvironment)
+        private readonly UserManager<IdentityUser> _userManager;
+        public FacilityController(IUnitOfWork unitOfWork,ApplicationDbContext db,IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
         {
             _unitOfWork = unitOfWork;
             _db = db;
-            _webHostEnvironment = webHostEnvironment;   
+            _webHostEnvironment = webHostEnvironment;
+            _userManager = userManager;
+
         }
 
         public IActionResult Index()
@@ -30,38 +33,35 @@ namespace CruiseShip.Areas.Admin.Controllers
             return View(objFacilityList);
         }
 
-        public IActionResult Upsert(int? id)
+        public async Task<IActionResult> Upsert(int? id)
         {
-            var adminRoleId = _db.Roles.Where(r => r.Name == "Admin").Select(r => r.Id).FirstOrDefault();
-            var adminUsers = from user in _db.Users
-                             join userRole in _db.UserRoles on user.Id equals userRole.UserId
-                             where userRole.RoleId == adminRoleId
-                             select new SelectListItem
-                             {
-                                 Value = user.Id.ToString(),
-                                 Text = user.UserName
-                             };
-            FacilityVM facilityVM = new()
-            {
-                Facility = new Facility(),
-                AdminUsers = adminUsers.ToList()
+            Facility facility = new Facility();
 
-            };
-            if (id == null || id==0)
+            // Check if id is null or zero
+            if (id == null || id == 0)
             {
-                return View(facilityVM);
+                // Return view with new facility
+                return View(facility);
             }
             else
             {
-                facilityVM.Facility = _unitOfWork.Facility.Get(f => f.Id == id);
-                
-                return View(facilityVM);
+                // Retrieve the existing facility from the database
+                facility = _unitOfWork.Facility.Get(f => f.Id == id);
+
+                // Return the view with the existing facility
+                return View(facility);
             }
         }
         [HttpPost]
-        public IActionResult Upsert(FacilityVM obj, IFormFile? file)
+        public async Task<IActionResult> Upsert(Facility obj, IFormFile? file)
         {
+            var user = await _userManager.GetUserAsync(User);
 
+            if (user != null)
+            {
+                // Ensure CreatedBy is set during the POST request
+                obj.CreatedBy = user.Id; // Assign the current user's ID
+            }
             if (ModelState.IsValid)
             {
                 string wwwRootPath = _webHostEnvironment.WebRootPath;
@@ -69,9 +69,9 @@ namespace CruiseShip.Areas.Admin.Controllers
                 {
                     string filename = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
-                    if (!string.IsNullOrEmpty(obj.Facility.ImageURL))
+                    if (!string.IsNullOrEmpty(obj.ImageURL))
                     {
-                        var oldImagePath = Path.Combine(wwwRootPath, obj.Facility.ImageURL.TrimStart('\\'));
+                        var oldImagePath = Path.Combine(wwwRootPath, obj.ImageURL.TrimStart('\\'));
                         if (System.IO.File.Exists(oldImagePath))
                             System.IO.File.Delete(oldImagePath);
 
@@ -80,18 +80,18 @@ namespace CruiseShip.Areas.Admin.Controllers
                     {
                         file.CopyTo(fileStream);
                     }
-                    obj.Facility.ImageURL = @"\images\facility\" + filename;
+                    obj.ImageURL = @"\images\facility\" + filename;
                 }
-                if (obj.Facility.Id == 0)
+                if (obj.Id == 0)
                 {
-                    _unitOfWork.Facility.Add(obj.Facility);
+                    _unitOfWork.Facility.Add(obj);
                     _unitOfWork.Save();
                     TempData["success"] = "Facility Created Successfully";
 
                 }
                 else
                 {
-                    _unitOfWork.Facility.Update(obj.Facility);
+                    _unitOfWork.Facility.Update(obj);
                     _unitOfWork.Save();
                     TempData["success"] = "Facility Updated Successfully";
 
@@ -101,16 +101,6 @@ namespace CruiseShip.Areas.Admin.Controllers
             }
             else
             {
-                var adminRoleId = _db.Roles.Where(r => r.Name == "Admin").Select(r => r.Id).FirstOrDefault();
-                var adminUsers = from user in _db.Users
-                                 join userRole in _db.UserRoles on user.Id equals userRole.UserId
-                                 where userRole.RoleId == adminRoleId
-                                 select new SelectListItem
-                                 {
-                                     Value = user.Id.ToString(),
-                                     Text = user.UserName
-                                 };
-                obj.AdminUsers = adminUsers.ToList();
                 return View(obj);
             }
         }

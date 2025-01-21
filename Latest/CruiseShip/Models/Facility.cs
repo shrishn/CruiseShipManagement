@@ -25,7 +25,7 @@ namespace CruiseShip.Models
         public int AvailableSlots { get; set; }
 
         [DisplayName("Created By")]
-        
+        [ValidateNever]
         public string CreatedBy { get; set; }
 
         // Navigation property
