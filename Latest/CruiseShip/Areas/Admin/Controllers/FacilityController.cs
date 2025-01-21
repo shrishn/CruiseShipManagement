@@ -1,7 +1,7 @@
 ﻿using CruiseShip.Data;
 using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
-using CruiseShip.Models.ViewModels;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

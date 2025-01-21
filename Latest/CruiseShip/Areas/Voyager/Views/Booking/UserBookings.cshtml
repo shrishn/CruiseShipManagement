@@ -1,0 +1,18 @@
+﻿@model CruiseShip.Models.ViewModels.UserBookingsViewModel
+@{
+    ViewData["Title"] = "UserBookings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>User Bookings</h1>
+
+
+<h2>Facilities booked by @Model.UserName</h2>
+
+<ul>
+    @foreach (var facility in Model.Facilities)
+    {
+        <li>@facility.Name</li>
+    }
+</ul>
+

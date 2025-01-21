@@ -8,7 +8,7 @@
 		<div class="col-lg-3 col-sm-6">
 			<div class="row p-2">
 				<div class="col-12 p-1">
-					<div class="card border-0 p-3 shadow border-top border-5 rounded">
+					<div class="card border-0 p-3 shadow  border-5 rounded card-hover">
 						<img src="@Facility.ImageURL" class="card-img-top rounded" />
 						<div class="card-body pb-0">
 							<div class="pl-1">
@@ -17,8 +17,10 @@
 							<div class="pl-1">
 								<p class="text-dark text-center">Fee:  <span>@Facility.Fee.ToString("c")</span></p>
 							</div>
+							<div class="d-flex justify-content-center align-items-center">
+								<a asp-area="Voyager" asp-controller="Booking" asp-action="RequestFacility" asp-route-id="@Facility.Id" class="btn btn-dark mx-2">Book <i class="bi bi-pencil-square"></i> </a>
+							</div>
 							
-							<a asp-area="Voyager" asp-controller="Booking" asp-action="RequestFacility" class="btn btn-dark mx-2">Book <i class="bi bi-pencil-square"></i> </a>
 						</div>
 					</div>
 				</div>
@@ -33,4 +35,17 @@
 		height: 200px; /* Set your desired height */
 		object-fit: cover; /* This ensures the image covers the area without distortion */
 	}
+
+	.card-hover {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		position: relative;
+		z-index: 1;
+	}
+
+		.card-hover:hover {
+			transform: scale(1.2);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+			border: 2px solid #000 !important; /* Add border on hover */
+			z-index: 10; /* Ensure the card appears above other elements */
+		}
 </style>

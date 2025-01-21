@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "QCLngXoAqrvB4I58aQU34b8N+krVkdqPfS0ywQeSB6M=",
+  "Source": "CruiseAPI",
+  "BasePath": "_content/CruiseAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

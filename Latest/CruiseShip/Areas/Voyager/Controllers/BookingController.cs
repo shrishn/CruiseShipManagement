@@ -1,57 +1,72 @@
 ﻿using System.Net.NetworkInformation;
+using CruiseShip.Data;
 using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
 using CruiseShip.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 
 
 namespace CruiseShip.Areas.Voyager.Controllers
 {
-    [Area("Voyager")]   
+    [Area("Voyager")]
+    [Authorize(Roles = "Voyager")]
 
     public class BookingController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly ApplicationDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
-        public BookingController(UserManager<IdentityUser> userManager, IUnitOfWork unitOfWork)
+        public BookingController(UserManager<IdentityUser> userManager, IUnitOfWork unitOfWork, ApplicationDbContext context)
         {
             _userManager = userManager;
             _unitOfWork = unitOfWork;
+            _context = context;
         }
-        public async Task<IActionResult> RequestFacility()
+        public async Task<IActionResult> RequestFacility(int? id)
         {
-            var user = await _userManager.GetUserAsync(User);
-            BookingVM booking = null; // Initialize the variable to null or a default instance
-
-            if (user != null)
-            {
-                var userId = user.Id;
-                booking = new BookingVM()
-                {
-                    Booking = new Booking() // Initialize the Booking object
-                    {
-                        VoyagerId = userId // Assign VoyagerId to the Booking object
-                    }
-                };
-            }
-            List<string> facilityNames = _unitOfWork.Facility
-                .GetAll(includeProperties: "CreatedByUser")
-                .Select(f => f.Name) // Assuming "Name" is the property for the facility name
-                .ToList();
-            booking.Facilities = facilityNames.Select(f => new SelectListItem
-            {
-                Text = f,
-                Value = f // Adjust the Value as needed (it could be an ID or something else)
-            }).ToList();
+            
+            Booking booking = new Booking(); // Initialize the variable to null or a default instance
+            booking.FacilityId = id;
             return View(booking);
         }
         [HttpPost]
-        public async Task<IActionResult> RequestFacility(BookingVM obj)
+        public async Task<IActionResult> RequestFacility(Booking obj)
         {
-            return RedirectToAction("Index");
+            var user = await _userManager.GetUserAsync(User);
+            if (user != null)
+            {
+                var userId = user.Id;
+                obj.VoyagerId = userId; // Assign VoyagerId to the Booking object
+            }
+            if (ModelState.IsValid) {
+                _context.Bookings.Add(obj);
+                _context.SaveChanges();
+                return RedirectToAction("Facility", "Home");
+            }
+            
+
+            return View(obj);
+            
+        }
+        public async Task<IActionResult> UserBookings()
+        {
+            var user = await _userManager.GetUserAsync(User) as UserProfile;
+            var bookings = await _context.Bookings
+                                         .Include(b => b.Facility)
+                                         .Where(b => b.VoyagerId == user.Id)
+                                         .ToListAsync();
+            var viewModel = new UserBookingsViewModel()
+            {
+                UserName = user.Name,
+                Facilities = bookings.Select(b => b.Facility).ToList()
+            };
+
+            return View(viewModel);
         }
 
     }

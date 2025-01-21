@@ -2,11 +2,13 @@ using System.Diagnostics;
 using CruiseShip.Data.Repository;
 using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CruiseShip.Areas.Voyager.Controllers
 {
     [Area("Voyager")]
+    [Authorize(Roles = "Voyager")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

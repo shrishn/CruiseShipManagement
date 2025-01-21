@@ -2,6 +2,7 @@
 using CruiseShip.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CruiseShip.Areas.Admin.Controllers
 {
@@ -17,7 +18,7 @@ namespace CruiseShip.Areas.Admin.Controllers
 
         public IActionResult ViewFacilityBookings()
         {
-            List<Booking> bookingList = _db.Bookings.Where(b => b.RoomId == null).ToList();
+            List<Booking> bookingList = _db.Bookings.Include(p=>p.Voyager).Include(p=>p.Facility).Where(b => b.RoomId == null).ToList();
             return View(bookingList);
          
         }
