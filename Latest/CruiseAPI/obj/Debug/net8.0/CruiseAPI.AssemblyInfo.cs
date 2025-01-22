@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CruiseAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b7be8e8216ec20a07ec3c227e405e3669ac1e4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d570306e1d7aa0baa957a33d6deca85a2b61fd9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CruiseAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CruiseAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj": {}
+    "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj": {}
   },
   "projects": {
-    "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj": {
+    "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj",
+        "projectUniqueName": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj",
         "projectName": "CruiseShip",
-        "projectPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj",
+        "projectPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\CruiseShip.csproj",
         "packagesPath": "C:\\Users\\2370018\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\",
+        "outputPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

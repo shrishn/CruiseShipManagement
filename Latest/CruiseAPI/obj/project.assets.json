@@ -453,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseAPI\\CruiseAPI.csproj",
+      "projectUniqueName": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseAPI\\CruiseAPI.csproj",
       "projectName": "CruiseAPI",
-      "projectPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseAPI\\CruiseAPI.csproj",
+      "projectPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseAPI\\CruiseAPI.csproj",
       "packagesPath": "C:\\Users\\2370018\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseAPI\\obj\\",
+      "outputPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

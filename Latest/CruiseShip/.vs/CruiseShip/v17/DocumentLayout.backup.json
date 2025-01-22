@@ -1,42 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\",
+  "WorkspaceRootPath": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\views\\shared\\_voyagernav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:views\\shared\\_voyagernav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\desktop\\cruiseshipmanagement\\latest\\cruiseship\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\areas\\voyager\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\voyager\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\models\\viewmodels\\userbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:models\\viewmodels\\userbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\areas\\voyager\\views\\booking\\userbookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\voyager\\views\\booking\\userbookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\areas\\admin\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\admin\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\documents\\cruiseshipmanagement\\latest\\cruiseship\\areas\\admin\\views\\booking\\viewfacilitybookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:areas\\admin\\views\\booking\\viewfacilitybookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|c:\\users\\2370018\\onedrive - cognizant\\desktop\\cruiseshipmanagement\\latest\\cruiseship\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B85A3B98-54C4-42C3-8725-E2A1D807A2ED}|CruiseShip.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T10:17:55.238Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -71,106 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserBookings.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Voyager\\Views\\Booking\\UserBookings.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Voyager\\Views\\Booking\\UserBookings.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Voyager\\Views\\Booking\\UserBookings.cshtml",
-              "RelativeToolTip": "Areas\\Voyager\\Views\\Booking\\UserBookings.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T10:17:08.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserBookingsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Models\\ViewModels\\UserBookingsViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\UserBookingsViewModel.cs",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Models\\ViewModels\\UserBookingsViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\UserBookingsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T10:06:57.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Voyager\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "Areas\\Voyager\\Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Voyager\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "Areas\\Voyager\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA9wDUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T09:51:43.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Models\\Booking.cs",
-              "RelativeToolTip": "Models\\Booking.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T09:50:20.869Z",
+              "WhenOpened": "2025-01-22T12:47:27.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T09:46:55.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_VoyagerNav.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_VoyagerNav.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_VoyagerNav.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Views\\Shared\\_VoyagerNav.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_VoyagerNav.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T09:42:57.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ViewFacilityBookings.cshtml",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Views\\Booking\\ViewFacilityBookings.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Booking\\ViewFacilityBookings.cshtml",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Views\\Booking\\ViewFacilityBookings.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Booking\\ViewFacilityBookings.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T09:45:34.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Documents\\CruiseShipManagement\\Latest\\CruiseShip\\Areas\\Admin\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABgAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\2370018\\OneDrive - Cognizant\\Desktop\\CruiseShipManagement\\Latest\\CruiseShip\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T09:44:52.496Z",
+              "WhenOpened": "2025-01-22T12:46:29.849Z",
               "EditorCaption": ""
             }
           ]

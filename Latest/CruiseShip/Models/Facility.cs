@@ -20,9 +20,13 @@ namespace CruiseShip.Models
 
         [Required]
         public decimal Fee { get; set; }
+        
         [DisplayName("Available Slots")]
         [Required, Range(1, 100)]
         public int AvailableSlots { get; set; }
+        
+        [ValidateNever]
+        public string ImageURL { get; set; }
 
         [DisplayName("Created By")]
         [ValidateNever]
@@ -32,10 +36,9 @@ namespace CruiseShip.Models
         //[NotMapped]
         [ForeignKey("CreatedBy")]
         [ValidateNever]
-        public IdentityUser CreatedByUser { get; set; }
-        [ValidateNever]
-        public string ImageURL { get; set; }
+        public UserProfile CreatedByUser { get; set; }
 
+        //Navigation Property
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }
 }

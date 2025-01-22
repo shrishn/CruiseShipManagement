@@ -12,7 +12,7 @@ function loadDataTable() {
             { data: 'description', "width": "25%" },
             { data: 'fee', "width": "5%" },
             { data: 'availableSlots', "width": "15%" },
-            { data: 'createdByUser.userName', "width": "10%" },
+            { data: 'createdByUser.name', "width": "10%" },
             {
                 data: 'imageURL',
                 render: function (data) {

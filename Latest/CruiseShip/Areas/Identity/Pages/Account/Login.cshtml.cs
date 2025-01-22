@@ -115,7 +115,22 @@ namespace CruiseShip.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    var user = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
+
+                    // Check the user's roles
+                    if (await _signInManager.UserManager.IsInRoleAsync(user, "Admin"))
+                    {
+                        return LocalRedirect(Url.Content("~/Admin/Home"));
+                    }
+                    else if (await _signInManager.UserManager.IsInRoleAsync(user, "Voyager"))
+                    {
+                        return LocalRedirect(Url.Content("~/Voyager/Home/Facility"));
+                    }
+                    else
+                    {
+                        return LocalRedirect(returnUrl);
+                    }
+                    //return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
                 {
