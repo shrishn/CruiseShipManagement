@@ -1189,3 +1189,7 @@ C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\Cruise
 C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\obj\Debug\net8.0\CruiseShip.pdb
 C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\obj\Debug\net8.0\CruiseShip.genruntimeconfig.cache
 C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\obj\Debug\net8.0\ref\CruiseShip.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

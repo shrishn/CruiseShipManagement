@@ -35,3 +35,14 @@ C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\Crui
 C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.pdb
 C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.genruntimeconfig.cache
 C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\ref\CruiseAPI.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.csproj.AssemblyReference.cache
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.AssemblyInfoInputs.cache
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.AssemblyInfo.cs
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.csproj.CoreCompileInputs.cache
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.sourcelink.json
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\refint\CruiseAPI.dll
+C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.pdb

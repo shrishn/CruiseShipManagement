@@ -32,12 +32,21 @@ builder.Services.AddControllersWithViews();
 // This registration has a scoped lifetime, meaning a new instance of FacilityRepository will be created for each HTTP request.
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddRazorPages();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json","Cruise Ship API v1");
+    });
 }
 else
 {
@@ -54,8 +63,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+app.MapDefaultControllerRoute();
 app.MapRazorPages();
 
 
