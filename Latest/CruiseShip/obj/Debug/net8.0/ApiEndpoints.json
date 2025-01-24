@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "CruiseShip.Controllers.BookingsController",
+    "ContainingType": "CruiseShip.Controllers.ApiController.BookingsController",
     "Method": "GetBookings",
     "RelativePath": "api/Bookings",
     "HttpMethod": "GET",
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "ContainingType": "CruiseShip.Controllers.BookingsController",
+    "ContainingType": "CruiseShip.Controllers.ApiController.BookingsController",
     "Method": "PostBooking",
     "RelativePath": "api/Bookings",
     "HttpMethod": "POST",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "ContainingType": "CruiseShip.Controllers.BookingsController",
+    "ContainingType": "CruiseShip.Controllers.ApiController.BookingsController",
     "Method": "GetBooking",
     "RelativePath": "api/Bookings/{id}",
     "HttpMethod": "GET",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "ContainingType": "CruiseShip.Controllers.BookingsController",
+    "ContainingType": "CruiseShip.Controllers.ApiController.BookingsController",
     "Method": "PutBooking",
     "RelativePath": "api/Bookings/{id}",
     "HttpMethod": "PUT",
@@ -93,7 +93,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CruiseShip.Controllers.BookingsController",
+    "ContainingType": "CruiseShip.Controllers.ApiController.BookingsController",
     "Method": "DeleteBooking",
     "RelativePath": "api/Bookings/{id}",
     "HttpMethod": "DELETE",

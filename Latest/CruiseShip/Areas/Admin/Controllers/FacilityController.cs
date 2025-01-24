@@ -28,7 +28,7 @@ namespace CruiseShip.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Facility> objFacilityList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
+            List<Facility> objFacilityList = await _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
             
             return View(objFacilityList);
         }
@@ -46,7 +46,15 @@ namespace CruiseShip.Areas.Admin.Controllers
             else
             {
                 // Retrieve the existing facility from the database
-                facility = _unitOfWork.Facility.Get(f => f.Id == id);
+                var result = await _unitOfWork.Facility.Get(f => f.Id == id);
+
+                if (result == null)
+                {
+                    return NotFound();
+                }
+
+                //facility = result;
+
 
                 // Return the view with the existing facility
                 return View(facility);

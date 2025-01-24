@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using CruiseShip.Data.Repository.IRepository;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 namespace CruiseShip.Data.Repository
@@ -20,7 +21,7 @@ namespace CruiseShip.Data.Repository
             dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public async Task<ActionResult<T>> Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             query=query.Where(filter);
@@ -32,10 +33,10 @@ namespace CruiseShip.Data.Repository
                     query = query.Include(includeProp);
                 }
             }
-            return query.FirstOrDefault();
+            return await query.FirstOrDefaultAsync();
         }
 
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+        public async Task<ActionResult<IEnumerable<T>>> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             if(!string.IsNullOrEmpty(includeProperties))
@@ -46,7 +47,7 @@ namespace CruiseShip.Data.Repository
                     query = query.Include(includeProp);
                 } 
             }
-            return query.ToList();
+            return await query.ToListAsync();
         }
 
         public void Remove(T entity)
@@ -58,5 +59,7 @@ namespace CruiseShip.Data.Repository
         {
             dbSet.RemoveRange(entity);
         }
+
+        
     }
 }

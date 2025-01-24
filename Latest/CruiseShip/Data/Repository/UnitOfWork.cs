@@ -8,17 +8,19 @@ namespace CruiseShip.Data.Repository
         private readonly ApplicationDbContext _db;
         public IFacilityRepository Facility { get; private set; }
         public IRoomRepository Room { get; private set; }
+        public IBookingRepository Booking { get; private set; }
         public UnitOfWork(ApplicationDbContext db) 
         {
             _db = db;
             Facility = new FacilityRepository(_db);
             Room = new RoomRepository(_db);
+            Booking = new BookingRepository(_db);
         }
-        
 
-        public void Save()
+
+        public async Task SaveAsync()
         {
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
         }
     }
 }

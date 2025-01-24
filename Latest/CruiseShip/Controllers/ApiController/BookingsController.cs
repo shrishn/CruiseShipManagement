@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CruiseShip.Data;
 using CruiseShip.Models;
 using Microsoft.AspNetCore.Authorization;
+using CruiseShip.Data.Repository.IRepository;
 
 namespace CruiseShip.Controllers.ApiController
 {
@@ -17,25 +18,25 @@ namespace CruiseShip.Controllers.ApiController
     [Authorize(Roles = "Voyager,Admin")]
     public class BookingsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public BookingsController(ApplicationDbContext context)
+        public BookingsController(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork=unitOfWork;
         }
 
         // GET: api/Bookings
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
         {
-            return await _context.Bookings.ToListAsync();
+            return await _unitOfWork.Booking.GetAll();
         }
 
         // GET: api/Bookings/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Booking>> GetBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _unitOfWork.Booking.Get(b=>b.Id==id);
 
             if (booking == null)
             {
@@ -105,7 +106,7 @@ namespace CruiseShip.Controllers.ApiController
 
         private bool BookingExists(int id)
         {
-            return _context.Bookings.Any(e => e.Id == id);
+            return _unitOfWork.Booking.Get(e => e.Id == id);
         }
     }
 }

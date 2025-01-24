@@ -43,6 +43,3 @@ C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\Cruise
 C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.sourcelink.json
-C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.dll
-C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\refint\CruiseAPI.dll
-C:\Users\2370018\OneDrive - Cognizant\Desktop\CruiseShipManagement\Latest\CruiseAPI\obj\Debug\net8.0\CruiseAPI.pdb

@@ -606,8 +606,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ty0zvmudxr</Fingerprint>
-      <Integrity>W1mYxzD6lwPGu08/3+aYNvD+ab+ErxtQBCeOfSaj7Oc=</Integrity>
+      <Fingerprint>uopy5u7ap8</Fingerprint>
+      <Integrity>cvyGafyTPkfW9hsC+PQmF2SklZ6CJyVDDF0YKgghVbw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\facility.js'))</OriginalItemSpec>
