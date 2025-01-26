@@ -19,15 +19,17 @@ namespace CruiseShip.Controllers.ApiController
     public class BookingsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ApplicationDbContext _context;
 
-        public BookingsController(IUnitOfWork unitOfWork)
+        public BookingsController(IUnitOfWork unitOfWork, ApplicationDbContext context)
         {
-            _unitOfWork=unitOfWork;
+            _unitOfWork = unitOfWork;
+            _context = context;
         }
 
         // GET: api/Bookings
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
+        public async Task<IEnumerable<Booking>> GetBookings()
         {
             return await _unitOfWork.Booking.GetAll();
         }
@@ -56,11 +58,11 @@ namespace CruiseShip.Controllers.ApiController
                 return BadRequest();
             }
 
-            _context.Entry(booking).State = EntityState.Modified;
+            _unitOfWork.Booking.Update(booking);
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _unitOfWork.SaveAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -82,31 +84,31 @@ namespace CruiseShip.Controllers.ApiController
         [HttpPost]
         public async Task<ActionResult<Booking>> PostBooking(Booking booking)
         {
-            _context.Bookings.Add(booking);
-            await _context.SaveChangesAsync();
+            await _unitOfWork.Booking.Add(booking);
+            await _unitOfWork.SaveAsync();
 
-            return CreatedAtAction("GetBooking", new { id = booking.Id }, booking);
+            return NoContent();
         }
 
         // DELETE: api/Bookings/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _unitOfWork.Booking.Get(p=>p.Id==id);
             if (booking == null)
             {
                 return NotFound();
             }
 
-            _context.Bookings.Remove(booking);
-            await _context.SaveChangesAsync();
+            await _unitOfWork.Booking.Remove(booking);
+            await _unitOfWork.SaveAsync();
 
             return NoContent();
         }
 
         private bool BookingExists(int id)
         {
-            return _unitOfWork.Booking.Get(e => e.Id == id);
+            return _context.Bookings.Find(id) != null;
         }
     }
 }

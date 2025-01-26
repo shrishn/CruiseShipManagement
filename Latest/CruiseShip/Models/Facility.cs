@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.Text.Json.Serialization;
 
 namespace CruiseShip.Models
 {
@@ -36,9 +37,12 @@ namespace CruiseShip.Models
         //[NotMapped]
         [ForeignKey("CreatedBy")]
         [ValidateNever]
+        
         public UserProfile CreatedByUser { get; set; }
 
         //Navigation Property
+        [ValidateNever]
+        [JsonIgnore]
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }
 }

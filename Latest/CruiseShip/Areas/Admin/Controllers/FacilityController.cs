@@ -6,31 +6,34 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 
 namespace CruiseShip.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles="Admin")]
+    [Authorize(Roles = "Admin")]
     public class FacilityController : Controller
     {
-        private readonly ApplicationDbContext _db;
+
+        private readonly HttpClient _httpClient;
+        private readonly string _apiBaseUrl = "https://localhost:7061/api/Facilities";
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly UserManager<IdentityUser> _userManager;
-        public FacilityController(IUnitOfWork unitOfWork,ApplicationDbContext db,IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
+       
+        public FacilityController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
         {
             _unitOfWork = unitOfWork;
-            _db = db;
             _webHostEnvironment = webHostEnvironment;
             _userManager = userManager;
+            _httpClient = new HttpClient();
+            
 
         }
 
         public IActionResult Index()
         {
-            List<Facility> objFacilityList = await _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
-            
-            return View(objFacilityList);
+            return View();
         }
 
         public async Task<IActionResult> Upsert(int? id)
@@ -46,16 +49,19 @@ namespace CruiseShip.Areas.Admin.Controllers
             else
             {
                 // Retrieve the existing facility from the database
-                var result = await _unitOfWork.Facility.Get(f => f.Id == id);
+                var response = await _httpClient.GetAsync(_apiBaseUrl+"/"+id);
 
-                if (result == null)
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonData = await response.Content.ReadAsStringAsync();
+                    facility = JsonConvert.DeserializeObject<Facility>(jsonData);
+                    
+                }
+                else
                 {
                     return NotFound();
                 }
-
                 //facility = result;
-
-
                 // Return the view with the existing facility
                 return View(facility);
             }
@@ -92,16 +98,32 @@ namespace CruiseShip.Areas.Admin.Controllers
                 }
                 if (obj.Id == 0)
                 {
-                    _unitOfWork.Facility.Add(obj);
-                    _unitOfWork.Save();
-                    TempData["success"] = "Facility Created Successfully";
-
+                    var jsonContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(obj), System.Text.Encoding.UTF8, "application/json");
+                    var response = await _httpClient.PostAsync(_apiBaseUrl, jsonContent);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        TempData["success"] = "Facility Created Successfully";
+                    }
+                    else
+                    {
+                        TempData["error"] = "Failed to create the facility.";
+                        return View(obj);
+                    }
                 }
                 else
                 {
-                    _unitOfWork.Facility.Update(obj);
-                    _unitOfWork.Save();
-                    TempData["success"] = "Facility Updated Successfully";
+                    var jsonContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(obj), System.Text.Encoding.UTF8, "application/json");
+                    var response = await _httpClient.PutAsync(_apiBaseUrl + "/" + obj.Id, jsonContent);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        TempData["success"] = "Facility Updated Successfully";
+                    }
+                    else
+                    {
+                        TempData["error"] = "Failed to update the facility.";
+                        return View(obj);
+                    }
 
                 }
 
@@ -113,32 +135,43 @@ namespace CruiseShip.Areas.Admin.Controllers
             }
         }
 
-                
+
 
         #region API CALLS
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            List<Facility> objFacilityList = _unitOfWork.Facility.GetAll(includeProperties: "CreatedByUser").ToList();
-            return Json(new { data = objFacilityList });
-        }
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            Facility? obj = _unitOfWork.Facility.Get(f => f.Id == id);
-            if (obj == null)
+            var response = await _httpClient.GetAsync(_apiBaseUrl);
+
+            if (response.IsSuccessStatusCode)
             {
-                return Json(new {success=false,message="Error while deleting"});
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var facility = JsonConvert.DeserializeObject<List<Facility>>(jsonData);
+                return Json(new { data = facility });
             }
-            string wwwRootPath = _webHostEnvironment.WebRootPath;
-            string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
-            var ImagePath = Path.Combine(wwwRootPath, obj.ImageURL.TrimStart('\\'));
-            if (System.IO.File.Exists(ImagePath))
-                System.IO.File.Delete(ImagePath);
-            _unitOfWork.Facility.Remove(obj);
-            _unitOfWork.Save();
-            return Json(new { success = true, message = "Delete Successful" });
-            }
+
+            TempData["ErrorMessage"] = "Error retrieving book list.";
+            
+           
+            return Json(new { data = new List<Facility>() });
+        }
+        //[HttpDelete]
+        //public IActionResult Delete(int id)
+        //{
+        //    Facility? obj = _unitOfWork.Facility.Get(f => f.Id == id);
+        //    if (obj == null)
+        //    {
+        //        return Json(new { success = false, message = "Error while deleting" });
+        //    }
+        //    string wwwRootPath = _webHostEnvironment.WebRootPath;
+        //    string facilityPath = Path.Combine(wwwRootPath, @"images\facility");
+        //    var ImagePath = Path.Combine(wwwRootPath, obj.ImageURL.TrimStart('\\'));
+        //    if (System.IO.File.Exists(ImagePath))
+        //        System.IO.File.Delete(ImagePath);
+        //    _unitOfWork.Facility.Remove(obj);
+        //    _unitOfWork.Save();
+        //    return Json(new { success = true, message = "Delete Successful" });
+        //}
         #endregion
     }
 }

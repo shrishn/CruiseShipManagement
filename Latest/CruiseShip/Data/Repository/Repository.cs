@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using CruiseShip.Data.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -16,12 +17,12 @@ namespace CruiseShip.Data.Repository
             _db.Facilities.Include(u => u.CreatedByUser).Include(u=>u.CreatedBy);
         }
 
-        public void Add(T entity)
+        public async Task Add(T entity)
         {
-            dbSet.Add(entity);
+            await dbSet.AddAsync(entity);
         }
 
-        public async Task<ActionResult<T>> Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public async Task<T> Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             query=query.Where(filter);
@@ -36,7 +37,7 @@ namespace CruiseShip.Data.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<ActionResult<IEnumerable<T>>> GetAll(string? includeProperties = null)
+        public async Task<IEnumerable<T>> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             if(!string.IsNullOrEmpty(includeProperties))
@@ -50,16 +51,16 @@ namespace CruiseShip.Data.Repository
             return await query.ToListAsync();
         }
 
-        public void Remove(T entity)
+        public async Task Remove(T entity)
         {
-            dbSet.Remove(entity);
+            await Task.Run(() => dbSet.Remove(entity));
         }
 
-        public void RemoveRange(IEnumerable<T> entity)
+        public async Task RemoveRange(IEnumerable<T> entities)
         {
-            dbSet.RemoveRange(entity);
+            await Task.Run(() => dbSet.RemoveRange(entities));
         }
 
-        
+
     }
 }

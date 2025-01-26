@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
+using System.Text.Json.Serialization;
 
 namespace CruiseShip.Models
 {
@@ -32,14 +33,17 @@ namespace CruiseShip.Models
 
         [ForeignKey("VoyagerId")]
         [ValidateNever]
+        [JsonIgnore]
         public UserProfile Voyager { get; set; }
 
         [ForeignKey("FacilityId")]
         [ValidateNever]
+        [JsonIgnore]
         public Facility Facility { get; set; }
 
         [ForeignKey("RoomId")]
         [ValidateNever]
+        [JsonIgnore]
         public Room Room { get; set; }
     }
 }

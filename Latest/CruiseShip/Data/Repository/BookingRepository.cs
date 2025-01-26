@@ -1,5 +1,6 @@
 ﻿using CruiseShip.Data.Repository.IRepository;
 using CruiseShip.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CruiseShip.Data.Repository
 {

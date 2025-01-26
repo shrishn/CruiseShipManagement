@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.Text.Json.Serialization;
 
 namespace CruiseShip.Models
 {
@@ -23,6 +25,8 @@ namespace CruiseShip.Models
         public string BookingDetails { get; set; }
 
         [ForeignKey("VoyagerId")]
+        [ValidateNever]
+        [JsonIgnore]
         public IdentityUser Voyager { get; set; }
     }
 }

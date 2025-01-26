@@ -5,6 +5,6 @@
         IFacilityRepository Facility { get; }
         IRoomRepository Room { get; }
         IBookingRepository Booking { get; }
-        void Save();
+        Task SaveAsync();
     }
 }
