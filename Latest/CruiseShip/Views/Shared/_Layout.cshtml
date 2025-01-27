@@ -42,9 +42,10 @@
                     @if (User.IsInRole("Admin"))
                     {
                         <ul class="navbar-nav ml-auto">
-                            <button type="button" class="icon-button">
+                            <button type="button" class="icon-button" onclick="window.location.href='https://localhost:7061/Admin/Booking/ViewFacilityBookings'">
+                                
                                 <span class="material-icons">notifications</span>
-                                <span class="icon-button__badge">2</span>
+                                <span class="icon-button__badge visually-hidden"></span>
                             </button>
                         </ul>
 
