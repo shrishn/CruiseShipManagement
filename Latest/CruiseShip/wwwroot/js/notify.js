@@ -6,7 +6,8 @@
         success: function (response) {
             console.log(response)
             // Assuming your API returns { success: true, count: X }
-            if (response.success) {
+            if (response.success)
+            {
                 const count = response.count;
 
                 // Update the badge
@@ -22,12 +23,12 @@
             }
         },
         error: function () {
-            console.error("Failed to fetch book request notification count.");
+            console.error("Failed to fetch booking request notification count.");
         }
     });
 }
 
-// Update the badge every 60 seconds
+// Update the badge every 10 seconds
 setInterval(updateBookingRequestNotificationCount, 10000);
 
 // Initial call to load the count

@@ -905,3 +905,7 @@ C:\Users\SHRISH\Documents\My Codes\Cognizant\Dot Net Standard\IDP\CruiseShipMana
 C:\Users\SHRISH\Documents\My Codes\Cognizant\Dot Net Standard\IDP\CruiseShipManagement\Latest\CruiseShip\obj\Debug\net8.0\CruiseShip.pdb
 C:\Users\SHRISH\Documents\My Codes\Cognizant\Dot Net Standard\IDP\CruiseShipManagement\Latest\CruiseShip\obj\Debug\net8.0\CruiseShip.genruntimeconfig.cache
 C:\Users\SHRISH\Documents\My Codes\Cognizant\Dot Net Standard\IDP\CruiseShipManagement\Latest\CruiseShip\obj\Debug\net8.0\ref\CruiseShip.dll
+C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\2370018\OneDrive - Cognizant\Documents\CruiseShipManagement\Latest\CruiseShip\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

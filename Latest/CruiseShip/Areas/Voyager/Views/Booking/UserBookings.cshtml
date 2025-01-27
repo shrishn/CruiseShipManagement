@@ -9,10 +9,44 @@
 
 <h2>Facilities booked by @Model.UserName</h2>
 
-<ul>
-    @foreach (var facility in Model.Facilities)
-    {
-        <li>@facility.Name</li>
-    }
-</ul>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-secondary  table-striped">
+        <thead>
+            <tr>
+                <th>Facility</th>
+                <th>Booked Date</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model.Bookings)
+            {
+                <tr>
+                    <td>@booking.Facility.Name</td>
+                    <td>@booking.BookingDate</td>
+                    <td>@booking.StartTime</td>
+                    <td>@booking.EndTime</td>
+                    <td>
+                        @switch (booking.Status)
+                        {
+                            case "Approved":
+                                <span class="badge bg-success">Approved</span>
+                                break;
+                            case "Rejected":
+                                <span class="badge bg-danger">Rejected</span>
+                                break;
+                            default:
+                                <span class="badge bg-warning">Pending</span>
+                                break;
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 

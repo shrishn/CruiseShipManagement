@@ -17,18 +17,16 @@ namespace CruiseShip.Areas.Admin.Controllers
 
         private readonly HttpClient _httpClient;
         private readonly string _apiBaseUrl = "https://localhost:7061/api/Facilities";
-        private readonly IUnitOfWork _unitOfWork;
+        
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly UserManager<IdentityUser> _userManager;
        
-        public FacilityController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
+        public FacilityController(IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
         {
-            _unitOfWork = unitOfWork;
+            
             _webHostEnvironment = webHostEnvironment;
             _userManager = userManager;
             _httpClient = new HttpClient();
-            
-
         }
 
         public IActionResult Index()
@@ -142,17 +140,12 @@ namespace CruiseShip.Areas.Admin.Controllers
         public async Task<IActionResult> GetAll()
         {
             var response = await _httpClient.GetAsync(_apiBaseUrl);
-
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var facility = JsonConvert.DeserializeObject<List<Facility>>(jsonData);
                 return Json(new { data = facility });
             }
-
-            TempData["ErrorMessage"] = "Error retrieving book list.";
-            
-           
             return Json(new { data = new List<Facility>() });
         }
         //[HttpDelete]

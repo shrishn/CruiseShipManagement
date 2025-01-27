@@ -109,6 +109,35 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CruiseShip.Controllers.ApiController.BookingsController",
+    "Method": "GetPendingRequestCount",
+    "RelativePath": "api/Bookings/count/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 403
+      },
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "CruiseShip.Controllers.ApiController.FacilitiesController",
     "Method": "GetFacilities",
     "RelativePath": "api/Facilities",

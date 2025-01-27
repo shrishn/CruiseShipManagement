@@ -1,3 +1,4 @@
+wwwroot\css\notify.css
 wwwroot\css\ShipWallpaper.jpg
 wwwroot\css\site.css
 wwwroot\favicon.ico
@@ -13,7 +14,6 @@ wwwroot\images\facility\4ef166a3-f7fe-40ef-b13e-24f03711ad65.jpg
 wwwroot\images\facility\5a2f4df4-9dd9-4e36-afed-4c87a2d7c9d4.jpg
 wwwroot\images\facility\5e421b60-ff72-476c-a600-e80a91c3f57d.jfif
 wwwroot\images\facility\6292472b-6117-439c-95d5-e8653d76f93d.jpg
-wwwroot\images\facility\66af61b9-d95e-426d-aab6-a8530ac97859.jpg
 wwwroot\images\facility\6cc3a254-a12d-4706-b236-7c6c177c764d.jpg
 wwwroot\images\facility\81cec0ce-4971-42ad-8612-b881987260a0.jpg
 wwwroot\images\facility\89493269-6e5c-43d2-8dfa-52a972d699ae.jpg
@@ -32,6 +32,7 @@ wwwroot\images\facility\e66625c1-e59b-43ff-8e6e-d5b2ae054937.jpeg
 wwwroot\images\facility\f27df5cf-11d6-4f9f-8ed0-eedceec8b7a7.jpeg
 wwwroot\js\facility.js
 wwwroot\js\newFile.js
+wwwroot\js\notify.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

@@ -15,7 +15,7 @@ namespace CruiseShip.Controllers.ApiController
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "Voyager,Admin")]
+    
     public class BookingsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -105,7 +105,22 @@ namespace CruiseShip.Controllers.ApiController
 
             return NoContent();
         }
+        // GET: api/BookRequests/count/pending
+        [HttpGet("count/pending")]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<int>> GetPendingRequestCount()
+        {
+           
+            int pendingCount = await _context.Bookings
+                .CountAsync(r => r.Status == "pending");
 
+            return Ok(new
+            {
+                success = true,
+                count = pendingCount
+            });
+        }
         private bool BookingExists(int id)
         {
             return _context.Bookings.Find(id) != null;
