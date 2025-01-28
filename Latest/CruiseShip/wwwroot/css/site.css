@@ -21,7 +21,12 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-
+    margin-bottom: 60px;
+    background: url('https://www.transparenttextures.com/patterns/white-carbon.png');
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #333; /* Dark gray (not too harsh like black) */
+    font-weight: 500;
 }
  

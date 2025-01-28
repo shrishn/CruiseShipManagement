@@ -124,5 +124,12 @@ namespace CruiseShip.Controllers.ApiController
         {
             return _context.Facilities.Find(id) != null;
         }
+        // GET: api/Facilities/Count
+        [HttpGet("Count")]
+        public async Task<ActionResult<int>> GetFacilityCount()
+        {
+            var facilityCount = await _context.Facilities.CountAsync();
+            return Ok(facilityCount);
+        }
     }
 }

@@ -1,14 +1,87 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="d-flex justify-content-center">
-    <div class="row">
-        <div class="col-12">
-            <h1>Welcome To Spirit Cruise Ship</h1>
-        </div>
+<!-- Hero Section -->
+<div class="container d-flex flex-row justify-content-center align-items-center text-center mt-5">
+    <div class="col-md-6 text-start">
+        <h1 class="mb-4 display-4 fw-semibold text-primary">Welcome to Spirit Cruise Ship</h1>
+        <h3 class="text-secondary">Dubai to Mumbai</h3>
+        <p class="lead text-muted">Experience the luxury of cruising across the Arabian Sea with breathtaking views, world-class facilities, and unforgettable moments.</p>
+    </div>
+    <div class="col-md-6">
+        <img src="/images/cruise-about.jpg" class="img-fluid rounded shadow" alt="Spirit Cruise Ship">
     </div>
 </div>
 
+<!-- About Us Section -->
+<section class="container text-center my-5 py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-start">
+            <img src="/images/cruise-night.jpg" class="img-fluid rounded shadow" alt="Spirit Cruise Ship">
+        </div>
+        <div class="col-md-6 text-start">
+            <h2 class="fw-bold">About Us</h2>
+            <p class="text-muted">
+                Spirit Cruise Ship is a luxury liner offering an unparalleled journey from <strong>Dubai to Mumbai</strong>.
+                Whether you're looking for a <strong>romantic getaway</strong>, a <strong>family vacation</strong>, or just an escape from routine,
+                our state-of-the-art facilities and exceptional hospitality ensure an unforgettable experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section class="container text-center bg-light py-5">
+    <h2 class="fw-bold">Contact Us</h2>
+    <p class="text-muted">Have any questions? We'd love to hear from you!</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h5><i class="fas fa-envelope text-primary"></i> Email</h5>
+            <p>support@spiritcruises.com</p>
+        </div>
+        <div class="col-md-4">
+            <h5><i class="fas fa-phone text-success"></i> Phone</h5>
+            <p>+971 55 123 4567</p>
+        </div>
+        <div class="col-md-4">
+            <h5><i class="fas fa-map-marker-alt text-danger"></i> Location</h5>
+            <p>Dubai Marina, UAE</p>
+        </div>
+    </div>
+</section>
+
+<!-- Include Bootstrap & Font Awesome for Icons -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+    /* Adjust hero section to be full-screen height */
+    .min-vh-100 {
+        min-height: 100vh;
+    }
+
+    /* Smooth hover effect for the book now button */
+    .btn-primary {
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+
+    /* Space for sections */
+    section {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* Improve footer visibility */
+    footer {
+        background: #222;
+    }
+</style>

@@ -110,6 +110,26 @@
   },
   {
     "ContainingType": "CruiseShip.Controllers.ApiController.BillsController",
+    "Method": "GetTotalBillAmount",
+    "RelativePath": "api/Bills/TotalAmount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Decimal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CruiseShip.Controllers.ApiController.BillsController",
     "Method": "GetuserBills",
     "RelativePath": "api/Bills/user/{id}",
     "HttpMethod": "GET",
@@ -380,5 +400,25 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CruiseShip.Controllers.ApiController.FacilitiesController",
+    "Method": "GetFacilityCount",
+    "RelativePath": "api/Facilities/Count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

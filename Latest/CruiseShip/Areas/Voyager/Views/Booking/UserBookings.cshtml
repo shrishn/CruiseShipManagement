@@ -1,52 +1,80 @@
 ﻿@model CruiseShip.Models.ViewModels.UserBookingsViewModel
 @{
-    ViewData["Title"] = "UserBookings";
+    ViewData["Title"] = "User Bookings";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>User Bookings</h1>
-
-
-<h2>Facilities booked by @Model.UserName</h2>
-
-
-<div class="table-responsive">
-    <table class="table table-bordered table-hover table-secondary  table-striped">
-        <thead>
-            <tr>
-                <th>Facility</th>
-                <th>Booked Date</th>
-                <th>Start</th>
-                <th>End</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var booking in Model.Bookings)
-            {
-                <tr>
-                    <td>@booking.Facility.Name</td>
-                    <td>@booking.BookingDate</td>
-                    <td>@booking.StartTime</td>
-                    <td>@booking.EndTime</td>
-                    <td>
-                        @switch (booking.Status)
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Bookings Overview for @Model.UserName</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Facility</th>
+                            <th>Booking Date</th>
+                            <th>Start</th>
+                            <th>End </th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var booking in Model.Bookings)
                         {
-                            case "Approved":
-                                <span class="badge bg-success">Approved</span>
-                                break;
-                            case "Rejected":
-                                <span class="badge bg-danger">Rejected</span>
-                                break;
-                            default:
-                                <span class="badge bg-warning">Pending</span>
-                                break;
+                            var duration = booking.EndTime.Subtract(booking.StartTime);
+                            string formattedDuration = duration.TotalMinutes < 60
+                            ? $"{duration.TotalMinutes:F0} mins"
+                            : duration.TotalHours < 24
+                            ? $"{duration.TotalHours:F1} hrs"
+                            : $"{duration.TotalDays:F1} days";
+                            <tr>
+                                <td>@booking.Facility.Name</td>
+                                <td>@booking.BookingDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@booking.StartTime.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@booking.EndTime.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@formattedDuration</td>
+                                <td>
+                                    @switch (booking.Status)
+                                    {
+                                        case "Approved":
+                                            <span class="badge bg-success">Approved</span>
+                                            break;
+                                        case "Rejected":
+                                            <span class="badge bg-danger">Rejected</span>
+                                            break;
+                                        default:
+                                            <span class="badge bg-warning">Pending</span>
+                                            break;
+                                    }
+                                </td>
+                            </tr>
                         }
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
+<style>
+    .card {
+        border-radius: 10px;
+    }
 
+    .table {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        text-align: center;
+    }
+
+    .badge {
+        padding: 0.5rem 1rem;
+    }
+</style>

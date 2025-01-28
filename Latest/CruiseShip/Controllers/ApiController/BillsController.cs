@@ -122,6 +122,14 @@ namespace CruiseShip.Controllers.ApiController
 
             return billsList;
         }
+        // GET: api/Bills/TotalAmount
+        [HttpGet("TotalAmount")]
+        public async Task<ActionResult<decimal>> GetTotalBillAmount()
+        {
+            var totalAmount = await _context.Bills.SumAsync(b => b.Amount);
+
+            return Ok(totalAmount);
+        }
     }
 
 }
