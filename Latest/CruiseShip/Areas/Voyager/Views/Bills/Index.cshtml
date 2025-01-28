@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Bill>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var totalFee = Model.Sum(bill => bill.Booking.Facility.Fee);
+}
+<partial name="_Notification" />
+
+<div class="d-flex">
+    <h4>Total Fee: </h4><h4> @totalFee</h4>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-secondary table-striped">
+        <thead>
+            <tr>
+                <th>Bill ID</th>
+                <th>Facility Name</th>
+                <th>Fee</th>
+                <th>Booking Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bill in Model)
+            {
+                <tr>
+                    <td>@bill.Id</td>
+                    <td>@bill.Booking.Facility.Name</td>
+                    <td>@bill.Booking.Facility.Fee</td>
+                    <td>@bill.Booking.BookingDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

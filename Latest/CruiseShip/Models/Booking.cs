@@ -38,7 +38,7 @@ namespace CruiseShip.Models
 
         [ForeignKey("FacilityId")]
         [ValidateNever]
-        [JsonIgnore]
+        
         public Facility Facility { get; set; }
 
         [ForeignKey("RoomId")]

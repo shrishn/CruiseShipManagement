@@ -13,7 +13,8 @@ namespace CruiseShip.Areas.Admin.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly HttpClient _httpClient;
-        private readonly string _apiBaseUrl = "https://localhost:7061/api/Bookings";
+        private readonly string _apiBookings = "https://localhost:7061/api/Bookings";
+        private readonly string _apiBills = "https://localhost:7061/api/Bills";
 
         public BookingController(ApplicationDbContext db)
         {
@@ -27,44 +28,67 @@ namespace CruiseShip.Areas.Admin.Controllers
             return View(bookingList);
          
         }
+
+
         [HttpGet]
-        public async Task <IActionResult> ApproveRequest(int? id) 
+        public async Task<IActionResult> ApproveRequest(int? id)
         {
-            var response = await _httpClient.GetAsync(_apiBaseUrl + "/" + id);
+            if (id == null)
+            {
+                return BadRequest("Invalid booking ID.");
+            }
+
+            var response = await _httpClient.GetAsync(_apiBookings + "/" + id);
             Booking booking = new Booking();
-           
 
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 booking = JsonConvert.DeserializeObject<Booking>(jsonData);
-
             }
             else
             {
                 return NotFound();
             }
+
             booking.Status = "Approved";
 
             var jsonContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(booking), System.Text.Encoding.UTF8, "application/json");
-            response = await _httpClient.PutAsync(_apiBaseUrl + "/" + booking.Id, jsonContent);
+            response = await _httpClient.PutAsync(_apiBookings + "/" + booking.Id, jsonContent);
 
             if (response.IsSuccessStatusCode)
             {
                 TempData["success"] = "Booking Approved";
-                return Json(new { success = true, message = "Booking Approved" });
+                Bill bill = new Bill()
+                {
+                    VoyagerId = booking.VoyagerId,
+                    Amount = booking.Facility.Fee,
+                    Status = "Generated",
+                    BookingId = booking.Id
+                };
+                jsonContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(bill), System.Text.Encoding.UTF8, "application/json");
+                response = await _httpClient.PostAsync(_apiBills, jsonContent);
 
+                if (response.IsSuccessStatusCode)
+                {
+                    return Json(new { success = true, message = "Booking Approved" });
+                }
+                else
+                {
+                    return Json(new { success = true, message = "Bill Generation Error" });
+                }
             }
             else
             {
                 TempData["error"] = "Failed to update the facility.";
-                return Json(new { success = false, message = "Failed to approved" });
+                return Json(new { success = false, message = "Failed to approve" });
             }
         }
+
         [HttpGet]
         public async Task<IActionResult> RejectRequest(int? id)
         {
-            var response = await _httpClient.GetAsync(_apiBaseUrl + "/" + id);
+            var response = await _httpClient.GetAsync(_apiBookings + "/" + id);
             Booking booking = new Booking();
 
 
@@ -81,7 +105,7 @@ namespace CruiseShip.Areas.Admin.Controllers
             booking.Status = "Rejected";
 
             var jsonContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(booking), System.Text.Encoding.UTF8, "application/json");
-            response = await _httpClient.PutAsync(_apiBaseUrl + "/" + booking.Id, jsonContent);
+            response = await _httpClient.PutAsync(_apiBookings + "/" + booking.Id, jsonContent);
 
             if (response.IsSuccessStatusCode)
             {

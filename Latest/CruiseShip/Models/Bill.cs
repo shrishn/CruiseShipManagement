@@ -18,11 +18,15 @@ namespace CruiseShip.Models
 
         [Required]
         [MaxLength(50)]
-        public string Status { get; set; }
+        public string Status { get; set; }//Generated Paid
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        public string BookingDetails { get; set; }
+        public int BookingId { get; set; }
+        [ForeignKey("BookingId")]
+        [ValidateNever]
+        
+        public Booking Booking { get; set; }
 
         [ForeignKey("VoyagerId")]
         [ValidateNever]

@@ -38,7 +38,7 @@ namespace CruiseShip.Controllers.ApiController
         [HttpGet("{id}")]
         public async Task<ActionResult<Booking>> GetBooking(int id)
         {
-            var booking = await _unitOfWork.Booking.Get(b=>b.Id==id);
+            var booking = await _unitOfWork.Booking.Get(b=>b.Id==id,includeProperties:"Facility");
 
             if (booking == null)
             {

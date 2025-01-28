@@ -168,7 +168,7 @@ namespace CruiseShip.Areas.Identity.Pages.Account
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        return LocalRedirect(Url.Content("~/Voyager/Home/Facility"));
                     }
                 }
                 foreach (var error in result.Errors)
