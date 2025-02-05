@@ -2,6 +2,8 @@ wwwroot\css\notify.css
 wwwroot\css\ShipWallpaper.jpg
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\cruise-about.jpg
+wwwroot\images\cruise-night.jpg
 wwwroot\images\facility\0163de56-0276-4632-9502-09436ec32aaa.jpg
 wwwroot\images\facility\09b75bc0-b5f3-4c27-8319-22a829413b20.jpg
 wwwroot\images\facility\1f74eef7-7877-437a-a528-54ee5c61576f.jpeg
