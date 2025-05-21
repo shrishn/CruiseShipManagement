@@ -107,7 +107,6 @@ A web application for managing facility bookings aboard a cruise ship. Built usi
 ## 🌱 Future Enhancements
 
 - Add email confirmations for bookings
-- Implement authentication with role-based access
 - Add facility availability calendar
 - Integrate payment gateway (e.g., Razorpay, Stripe)
 - Deploy to cloud (e.g., Azure, AWS)
