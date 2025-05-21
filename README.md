@@ -74,24 +74,24 @@ A web application for managing facility bookings aboard a cruise ship. Built usi
    ```bash
    git clone https://github.com/shrishn/CruiseShipManagement.git
    cd cruise-facility-booking   
-1. **🛠️ Configure the database connection**
+2. **🛠️ Configure the database connection**
 
-Update `appsettings.json`:
+    Update `appsettings.json`:
 
-```json
-"ConnectionStrings": {
-  "DefaultConnection": "Your SQL Server connection string"
-} 
-```
+    ```json
+    "ConnectionStrings": {
+    "DefaultConnection": "Your SQL Server connection string"
+    } 
+    ```
 
-Apply migrations & update the database
-```
-dotnet ef database update
-```
-Run the application
-```
-dotnet run
-```
+    Apply migrations & update the database
+    ```
+    dotnet ef database update
+    ```
+    Run the application
+    ```
+    dotnet run
+    ```
 
 ## 🗃 Database Design
 
