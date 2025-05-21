@@ -10,8 +10,8 @@ A web application for managing facility bookings aboard a cruise ship. Built usi
   - [📌 Table of Contents](#-table-of-contents)
   - [📸 Screenshots](#-screenshots)
     - [🏠 Homepage](#-homepage)
-    - [📅 Booking Page](#-booking-page)
     - [🧑‍💼 Admin Dashboard](#-admin-dashboard)
+    - [📅 Booking Page](#-booking-page)
   - [✅ Features](#-features)
     - [Admin](#admin)
     - [Voyager (User)](#voyager-user)
@@ -27,13 +27,15 @@ A web application for managing facility bookings aboard a cruise ship. Built usi
 ## 📸 Screenshots
 
 ### 🏠 Homepage
-![Homepage](Latest\Screenshots\HomePage.png)
-
-### 📅 Booking Page
-![Booking Page](Latest/Screenshots/User-Booking.png)
+![Homepage](Latest/Screenshots/HomePage.png)
 
 ### 🧑‍💼 Admin Dashboard
 ![Admin Panel](Latest/Screenshots/Admin-Dashboard.png)
+
+### 📅 Booking Page
+![Booking Page](Latest/Screenshots/User-Facility.png)
+
+
 
 
 
